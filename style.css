@@ -43,6 +43,7 @@ body{
     background-size: 50%;
     /* overflow: hidden; */
 }
+/*menu bar*/
 .home_icon{
     right: 50px;
     width: 45px;
@@ -61,6 +62,23 @@ body{
     cursor: pointer;
     position: fixed;
     z-index: 100;
+}
+.topicon_menubar{
+    /* position: absolute; */
+    top: 110px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+}
+#menubar{
+    right: 48px;
+    display: none;
+    background-color: none;
+}
+#menubar a{
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
 }
 #contentbox{
     background-color: #F7F1E3;
@@ -313,7 +331,7 @@ body{
 }
 
 
-  
+
 
 @media screen and (orientation: portrait){
     #sky{
@@ -382,5 +400,5 @@ body{
     .pic_wrap[data-landmark="yes"]{
         height: 100px;
     }
-    
+
 }

@@ -116,6 +116,9 @@ $(window).scroll(function () {
         model[5].style.transform = 'translate(150%, 0%)';
         text[1].style.transform = 'translate(-50%, 50vh)';
     }
+    if(scrollv>screen_height*6){
+        text[1].style.transform = 'translate(-50%, -80vh)';
+    }
 
     //กลุ่มสาม
     if(screen_height*8 > scrollv){
@@ -202,6 +205,9 @@ $(window).scroll(function () {
         model[11].style.transform = 'translate(-100%, 0%)';
         model[12].style.transform = 'translate(0%, 100%)';
         text[3].style.transform = 'translate(-50%, 50vh)';
+    }
+    if(scrollv>screen_height*14){
+        text[3].style.transform = 'translate(-50%, -60vh)';
     }
 
     //กลุ่มห้า

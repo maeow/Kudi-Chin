@@ -110,7 +110,7 @@ body{
 #line{
     width: auto;
     background-color: #f25b52;
-    height: 5px;
+    height: 0.1rem;
     margin-left: 17%;
     margin-right: 17%;
 }
@@ -358,6 +358,11 @@ body{
     float:left;
 }
 
+.font_footer{
+    font-size: 1rem;
+    color: #E85555;
+}
+
 
 @media screen and (orientation: portrait){
     #sky{
@@ -460,5 +465,8 @@ body{
         font-size: 0.8rem;
     }
 
+    .font_footer{
+        font-size: 0.5rem;
+    }
     
 }

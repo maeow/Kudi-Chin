@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree&display=swap');
+
+body{
+    background-color: #F7F1E3;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.wrap{
+    position: relative;
+    width: 100vw;
+    height: 400vh;
+    /* background-color: black; */
+    /* overflow: hidden; */
+    overflow-x: hidden;
+}
+.wrap:nth-child(odd){
+    /* background-color: black; */
+    z-index: -2;
+}
+.content{
+    margin-top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.text{
+    z-index: -1;
+    transition: 1s;
+    font-family: 'Maitree', serif;
+    font-weight: 400;
+    color: #246F2C;
+    position: fixed;
+    margin: 0;
+    font-size: 1.5vmax;
+    transition: none;
+    text-align: center;
+}
+.text[data-text="first"]{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 800%);
+    transition: 0s;
+}
+.text[data-text="sec"]{
+    /* transition: 1s; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50vh);
+}
+.text[data-text="third"]{
+    /* transition: 1s; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50vh);
+}
+.text[data-text="forth"]{
+    /* transition: 1s; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50vh);
+}
+.text[data-text="fifth"]{
+    /* transition: 1s; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50vh);
+}
+
+
+.model{
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+    /* position: absolute; */
+    transition: 1s;
+    position: fixed;
+    /* position: absolute; */
+
+}
+img.model{
+    background-color: rgba(255, 0, 0, 0);
+}
+.model[data-img="bigTemple"]{
+    width: 30vmax;
+    height: auto;
+    left: calc(50% - 16vmax);
+    transform: translate(-10%, -100%);
+}
+.model[data-img="smallTemple"]{
+    width: 25vmax;
+    height: auto;
+}
+.model[data-img="Tak"]{
+    top: 0;
+    position: fixed;
+    left: calc(50% - 9vmax);
+    transform: translate(0, -100%);
+    transition: 1.5s;
+    width: 18vmax;
+    height: auto;
+}
+.model[data-img="women"]{
+    width: 20vmax;
+    height: auto;
+    transition: 1.5s;
+    position: fixed;
+}
+.model[data-img="solder1"]{
+    width: 11vmax;
+    height: auto;
+}
+.model[data-img="solder2"]{
+    width: 17vmax;
+    height: auto;
+}
+.model[data-img="solder3"]{
+    width: 13vmax;
+    height: auto;
+    right: calc(12% - 100px);
+    bottom: 0;
+    transform: translate(20%, 100%);
+    transition: 1.5s
+}
+.model[data-img="river"]{
+    width: 100vw;
+    height: 60vh;
+    /* height: auto; */
+    /* left: calc(50% - 100px); */
+    bottom: 0%;
+    transform: translate(0, 100%);
+}
+.model[data-img="house"]{
+    width: 25vmax;
+    height: auto;
+    left: 0;
+    z-index: 1;
+    /* bottom: calc(50% - 16vmax); */
+    bottom: 15vh;
+    transform: translate(-100%, 0%);
+    transition: 1.5s;
+}
+.model[data-img="pro_people1"]{
+    width: 12vmax;
+    height: auto;
+}
+.model[data-img="pro_people2"]{
+    width: 11vmax;
+    height: auto;
+}
+.model[data-img="people1"]{
+    width: 15vmax;
+    height: auto;
+}
+.model[data-img="people2"]{
+    width: 8vmax;
+    height: auto;
+}
+.model[data-img="people3"]{
+    width: 15vmax;
+    height: auto;
+}
+.model[data-img="people4"]{
+    width: 10vmax;
+    height: auto;
+}
+/* .model[data-img="people5"]{
+    width: 11vmax;
+    height: auto;
+} */
+
+
+#first > .content > .model:nth-child(2){
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+    /* animation: move_2 1s forwards; */
+}
+#first > .content > .model:nth-child(3){
+    right: 0;
+    bottom: 0;
+    transform: translate(50%, 100%);
+    /* animation: move_3 1s forwards; */
+}
+
+
+#second > .content > .model:nth-child(2){
+    left: 0;
+    bottom: calc(50% - 10vmax);
+    transform: translate(-150%, 0%) scaleX(-1);
+    /* animation: move_5 1s forwards; */
+}
+#second > .content > .model:nth-child(3){
+    right: 0;
+    bottom: calc(50% - 10vmax);
+    transform: translate(150%, 0%);
+    /* animation: move_6 1s forwards; */
+}
+#first > .content > .model{
+    position: fixed;
+}
+#third > .content > .model{
+    transition: 0s;
+}
+#third > .content > .model:nth-child(1){
+    right: 0;
+    bottom: 20%;
+    transform: translate(100%, 5%);
+    /* transition: 1.5s; */
+}
+#third > .content > .model:nth-child(2){
+    right: calc(30% - 100px);
+    bottom: 0;
+    transform: translate(20%, 100%);
+    /* transition: 1.5s */
+    /* transform: translate(-180%, -120%); */
+}
+#third > .content > .model:nth-child(4){
+    right: 0;
+    top: 0;
+    transform: translate(100%, -100%);
+    /* transition: 1.5s */
+    /* transform: translate(-130%, 130%); */
+}
+#third > .content > .model:nth-child(5){
+    right: 0;
+    top: 50%;
+    transform: translate(100%, 0);
+    /* transition: 1.5s */
+    /* transform: translate(-50%, 0%); */
+}
+#fifth > .content > .model:nth-child(1){
+    left: 0;
+    top: 0;
+    transform: translate(-100%, -100%);
+}
+#fifth > .content > .model:nth-child(2){
+    right: 0;
+    top: 0%;
+    transform: translate(100%, -100%);
+}
+#sixth > .content > .model:nth-child(1){
+    top: 0;
+    left: calc(50% - 100px);
+    transform: translate(100%, -100%);
+    /* transform: translate(-100%, 30%); */
+}
+#sixth > .content > .model:nth-child(2){
+    left : 0;
+    bottom: 0;
+    transform: translate(-100%, 100%);
+    /* transform: translate(320%, -160%); */
+}
+#sixth > .content > .model:nth-child(3){
+    right: 20%;
+    bottom: 0;
+    transform: translate(100%, 100%);
+    /* transform: translate(-70%, -90%); */
+}
+#sixth > .content > .model:nth-child(4){
+    right: 0;
+    top: 10%;
+    transform: translate(100%, -100%);
+    /* transform: translate(-100%, 30%); */
+}
+#sixth > .content > .model:nth-child(5){
+    right: 0;
+    bottom: 0%;
+    transform: translate(100%, 100%);
+    /* transform: translate(-50%, -90%); */
+}
+
+
+
+/* portrait */
+@media screen  and (orientation: portrait){
+    .text{
+        font-size: 2.1vmax;
+        text-align: left;
+        text-indent: 5vw;
+        width: 85vw;
+    }
+    br[data-display="landscape"]{
+        display: none;
+    }
+    #first > .content > .model:nth-child(2){
+        width: 22vmax;
+        bottom: 50%;
+        transform: translate(-100%, 0%);
+    }
+    #first > .content > .model:nth-child(3){
+        bottom: 30%;
+        transform: translate(100%, 150%);
+        /* animation: move_3 1s forwards; */
+    }
+    .model[data-img="solder1"]{
+        width: 18vmax;
+    }
+    .model[data-img="solder2"]{
+        width: 30vmax;
+    }
+    .model[data-img="solder3"]{
+        width: 23vmax;
+        transition: 1.5s;
+        right: 0;
+        top: 18%;
+        z-index: -2;
+        transform: translate(100%, 10%);
+    }
+    #third > .content > .model:nth-child(1){
+        right: 0;
+        top: 30%;
+        z-index: -1;
+        /* transform: translate(-25vw, -7vh); */
+        transform: translate(100%, 50%);
+    }
+    #third > .content > .model:nth-child(2){
+        right: 0;
+        top: 40%;
+        /* transform: translate(-5vw, -6vh); */
+        z-index: 1;
+        transform: translate(100%, 50%);
+    }
+    #third > .content > .model:nth-child(4){
+        right: 0;
+        top: 5%;
+        z-index: -3;
+        transform: translate(100%, 30%);
+    }
+    #third > .content > .model:nth-child(5){
+        width: 20vmax;
+        right: 0;
+        top: 30%;
+        z-index: -1;
+        transform: translate(100%, 20%);
+    }
+    .model[data-img="river"]{
+        width: 180vw;
+        height: 30vh;
+        bottom: -4vh;
+        transition: 1.5s;
+        left: -40vw;
+        transform: translate(0, 100%);
+    }
+    .model[data-img="house"]{
+        width: 100vw;
+        left: -28vw;
+        z-index: 1;
+        bottom: 20vh;
+        transform: translate(-100%, 0%);
+        transition: 1.5s;
+        max-width: 600px;
+    }
+    #fifth > .content > .model:nth-child(1){
+        width: 22vmax;
+        left: 0;
+        top: 25%;
+        transform: translate(-100%, 0%);
+    }
+    #fifth > .content > .model:nth-child(2){
+        width: 20vmax;
+        right: 0;
+        top: 25%;
+        transform: translate(100%, 0%);
+    }
+
+}
+
+
+
+/* aniamtion */
+
+/* section 1 */
+@keyframes move_1{
+    from{
+        transform: translate(-10%, -100%);
+    }
+    to{
+        transform: translate(0, 25%);
+    }
+}
+@keyframes move_back1{
+    from{
+        transform: translate(0, 25%);
+    }
+    to{
+        transform: translate(-10%, -100%);
+    }
+}
+@keyframes move_2{
+    from{
+        transform: translate(-50%, 100%);
+    }
+    to{
+        transform: translate(30%, -10%);
+    }
+}
+@keyframes move_back2{
+    from{
+        transform: translate(30%, -10%);
+    }
+    to{
+        transform: translate(-50%, 100%);
+    }
+}
+@keyframes move_3{
+    from{
+        transform: translate(50%, 100%);
+    }
+    to{
+        transform: translate(-30%, -10%);
+    }
+}
+@keyframes move_back3{
+    from{
+        transform: translate(-30%, -10%);
+    }
+    to{
+        transform: translate(50%, 100%);
+    }
+}
+
+/* section 2 */
+@keyframes move_4{
+    from{
+        /* transform: translate(0%, -100%); */
+    }
+    to{
+        transform: translate(0, 25%);
+    }
+}
+@keyframes move_back4{
+    from{
+        transform: translate(0, 25%);
+    }
+    to{
+        transform: translate(0%, -100%);
+    }
+}
+@keyframes move_5{
+    from{
+        /* transform: translate(-150%, 0%); */
+    }
+    to{
+        transform: translate(150%, 0%);
+    }
+}
+@keyframes move_back5{
+    from{
+        /* transform: translate(30%, -10%); */
+        transform: translate(150%, 0%);
+    }
+    to{
+        transform: translate(-150%, 0%);
+    }
+}
+@keyframes move_6{
+    from{
+        /* transform: translate(150%, 0%); */
+    }
+    to{
+        transform: translate(-150%, 0%);
+    }
+}
+@keyframes move_back6{
+    from{
+        /* transform: translate(-30%, -10%); */
+        transform: translate(-150%, 0%);
+    }
+    to{
+        transform: translate(150%, 0%);
+    }
+}

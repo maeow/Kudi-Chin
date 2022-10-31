@@ -118,7 +118,15 @@ $(window).scroll(function () {
     }
 
     //กลุ่มสาม
-    if(scrollv >= screen_height*10 && scrollv > current_scroll){
+    if(screen_height*8 > scrollv){
+        model[6].style.transform = 'translate(100%, 5%)';
+        model[7].style.transform = 'translate(20%, 100%)';
+        model[8].style.transform = 'translate(20%, 100%)';
+        model[9].style.transform = 'translate(100%, -100%)';
+        model[10].style.transform = 'translate(100%, 0)';
+        text[2].style.transform = 'translate(-50%, 50vh)';
+    }
+    else if(scrollv >= screen_height*10 && scrollv > current_scroll){
         model[6].style.transform = 'translate(-100vw, -2vw)';
         model[7].style.transform = 'translate(-100vw, 1vw)';
         model[8].style.transform = 'translate(-100vw, 0)';

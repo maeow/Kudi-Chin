@@ -69,7 +69,7 @@ body{
 
 
 .model{
-    background-color: coral;
+    /* background-color: coral; */
     width: 200px;
     height: 200px;
     /* position: absolute; */
@@ -268,6 +268,47 @@ img.model{
     bottom: 0%;
     transform: translate(100%, 100%);
     /* transform: translate(-50%, -90%); */
+}
+
+
+
+.navbar{
+    /* position: absolute; */
+    margin: 15%;
+    /* margin-left: 22%; */
+    margin-top: 190px;
+    position: relative;
+    margin-bottom: 0;
+    width: auto;
+    /* height: 50px; */
+    height: 2.5vw;
+    /* bottom: 8%;
+    left: 20%; */
+    background-color: #F6DCC7;
+    /* border-radius: 52px; */
+    border-radius: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: flex-end;
+}
+.iconplace{
+    width: 12%;
+    min-width: 44.2px;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 120px;
+}
+.iconplace img{
+    min-width: 44.2px;
 }
 
 

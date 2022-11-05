@@ -40,37 +40,46 @@ body{
     /* overflow: hidden; */
 }
 /*menu bar*/
-.home_icon{
-    right: 50px;
-    width: 50px;
-    /* height: 70px; */
-    /* position: fixed; */
-    /* z-index: 100; */
+.topicon{
+    top: 35px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
 }
 .kudi_icon{
-    left: 50px;
+    left: 3.5vh;
     width: 120px;
-    /* position: absolute; */
 }
-.topicon{
-    /* position: absolute; */
-    top: 50px;
+.topicon_mainmenu{
+    top: 25px;
     cursor: pointer;
     position: fixed;
     z-index: 100;
+}
+.homemain_icon{
+    right: 3.5vh;
+    width: 68px;
 }
 .topicon_menubar{
-    /* position: absolute; */
     top: 60px;
-    padding-top: 60px;
+    padding-top: 5.5vh;
+    padding-bottom: 2vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
     background-color: #F6DCC7;
-    border-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
     cursor: pointer;
     position: fixed;
     z-index: 100;
 }
+.home_icon{
+    right: 4vh;
+    width: 62px;
+    margin-top: 0.2vh;
+}
 #menubar{
-    right: 50px;
+    right: 3.4vh;
     display: none;
     background-color: none;
 }
@@ -194,32 +203,46 @@ body{
     left: -2.5%;
     top: -50px;
 }
+/*เมฆ Animation*/
 .clouds{
     position: absolute;
-    width: 310px;
+    width: 30vh;
 }
 .clouds:nth-child(1){
-    right: 100px;
+    right: -40vh;
+    top: -2vh;
+    animation: movecloud 20s linear infinite;
 }
 .clouds:nth-child(2){
-    width: 230px;
-    left: 35%;
-    bottom: 80px;
+    right: -30vh;
+    bottom: 21vh;
+    animation: movecloud 15s linear infinite;
+}
+@keyframes movecloud{
+    0% {
+        transform: translatex(0);
+    }
+    100% {
+        transform: translatex(-250vh);
+    }
 }
 .clouds:nth-child(3){
-    left: 30%;
-    top: -10px;
-    width: 230px;
-    /* bottom: 100px; */
+    right: -140vh;
+    top: 18vh;
+    animation: movecloud2 25s linear infinite;
 }
 .clouds:nth-child(4){
-    left: 70px;
-    bottom: 100px;
+    right: -120vh;
+    bottom: -2vh;
+    animation: movecloud2 17s linear infinite;
 }
-.clouds:nth-child(5){
-    width: 290px;
-    right: -120px;
-    bottom: 120px;
+@keyframes movecloud2{
+    0% {
+        transform: translatex(0);
+    }
+    100% {
+        transform: translatex(-340vh);
+    }
 }
 #clouds_wrap{
     z-index: -100;
@@ -361,6 +384,9 @@ body{
 .font_footer{
     font-size: 1rem;
     color: #E85555;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #F7F1E3;
 }
 
 

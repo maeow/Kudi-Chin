@@ -8,6 +8,7 @@
     <title>โบสถ์ซางตาครูส</title>
     <link rel="stylesheet" href="place2_style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 <body>
@@ -180,38 +181,6 @@
 
                 <div id="line"></div>
 
-                <!--row3
-                <div class="row">
-                    <div class="column" style="background-color:salmon;">
-                        <center><h1 class="title">รูปแบบสถาปัตยกรรม</h1></center>
-                        <p class="detail">เป็นการผสมผสานกันระหว่างศิลปะแบบนีโอคลาสสิค และเรเนอซองส์ <br>
-                            ลักษณะของโดมนั้นถอดแบบมาจากโดมของ มหาวิหารฟลอเรนซ์ ที่เมืองฟลอเรนซ์ ประเทศอิตาลี</p>
-                    </div>
-                    <div class="column" style="background-color:pink;">
-                        <img src="https://media.discordapp.net/attachments/1036531069572362291/1036532932229214238/390ff3c039f14511.png"
-                            alt="" style="width: 70%; height:70%;">
-                    </div>
-                    <div class="column" style="background-color:rgb(56, 154, 157);">
-                        <div class="column3" style="background-color:rgb(84, 100, 100);">
-                            <img src="https://media.discordapp.net/attachments/1036531069572362291/1036599808376455178/ae93a27425b22caf.PNG?width=663&height=663"
-                                alt="" style="width: 100%; height: 100%;">
-                        </div>
-                        <div class="column3" style="background-color:rgb(56, 154, 157);">
-                            <p class="detail">ภายในโบสถ์ก็ตกแต่งด้วยสีขาว สีดำ <br>และสีทองเป็นหลัก มีกระจกสีประดับอยู่ตรงหน้าต่าง <br>ประกอบไปด้วยภาพจิตรกรรมฝาผนัง<br>ที่บอกเล่าถึงประวัติของคริสต์ศาสนา</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        
-                    </div>
-                    <div class="column">
-                        <center>
-                        <h2 class="font_pinkcolor">ระฆังการิย็อง</h2>
-                        <button class="button button1"><h5 class="font_pinkcolor">ระฆังฝรั่งเศสอายุกว่า 100 ปี</h5></button>
-                        </center>
-                    </div>
-                </div>
-                -->
-
                 <br>
                 <!--row4-->
                 <div class="row">
@@ -241,6 +210,8 @@
                     </div>
                 </div>
 
+
+
                 <!--row5-->
                 <div class="row">
                     <div class="column" style="width: 100%;">
@@ -251,20 +222,45 @@
                         <div class="column" style="width: 60%;">
                             <p class="detail">ภายในโบสถ์ก็ตกแต่งด้วยสีขาว สีดำ <br>และสีทองเป็นหลัก
                                 มีกระจกสีประดับอยู่ตรงหน้าต่าง
-                                <br>ประกอบไปด้วยภาพจิตรกรรมฝาผนัง<br>ที่บอกเล่าถึงประวัติของคริสต์ศาสนา</p>
+                                <br>ประกอบไปด้วยภาพจิตรกรรมฝาผนัง<br>ที่บอกเล่าถึงประวัติของคริสต์ศาสนา
+                            </p>
                         </div>
                         <br>
                         <div class="row">
                             <div class="column4">
                                 <div>
                                     <h2 class="font_pinkcolor">ระฆังการิย็อง</h2>
-                                    <button class="button button1"><h5 class="font_pinkcolor">ระฆังฝรั่งเศสอายุกว่า 100 ปี</h5></button> 
+                                    <!--buttonpopup-->
+                                    <div id="app">
+                                        <div v-on:click="check">
+                                            <button class="button button1">
+                                                <h5 class="font_pinkcolor">ระฆังฝรั่งเศสอายุกว่า 100 ปี</h5>
+                                            </button>
+                                        </div>
+                                        </main>
+                                        <div id="popup_wrap" v-if="isPopup">
+                                            <div id="popup_box">
+                                                <div id="popup_close" v-on:click="popupClose">x</div>
+                                                <h2 class="text-center title2">ระฆังการิย็อง</h2>
+                                                <center>
+                                                    <img src="https://media.discordapp.net/attachments/1036531069572362291/1040949484147986542/eb5913746f9da4c0.PNG?width=1109&height=662"
+                                                        alt="" style="width: 60%;">
+                                                </center>
+                                                <p class="detail" style="text-align: left; padding: 1rem;">องค์ประกอบของระฆังชุดนี้ก็จะประกอบไปด้วยระฆัง 16 ใบ
+                                                    ที่มีเสียงของโน้ตที่ต่างกันสามารถเล่นเป็นเพลงได้ด้วยการกดแป้นไม้ที่มีลักษณะคล้ายกับเปียโน
+                                                    ลงไปสายสลิงที่โยงไว้กับแป้นจะทำหน้าที่ดึงค้อนที่แขวนอยู่ด้านในตัวระฆังให้กระทบกับใบระฆังจนเกิดเสียงขึ้นมา
+                                                    การเล่นแบบนี้ต้องออกแรงกดค่อนข้างมากเพราะตัวค้อนแขวนมีน้ำหนักเยอะพอสมควร
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
+
+
 
 
 
@@ -340,6 +336,32 @@
         });
 
     </script>
+    <script type="text/javascript">
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                isPopup: false,
+                popup: {
+                    title: 'ระฆังการิย็อง',
+                    body: 'องค์ประกอบของระฆังชุดนี้ก็จะประกอบไปด้วยระฆัง 16 ใบ ที่มีเสียงของโน้ตที่ต่างกันสามารถเล่นเป็นเพลงได้ด้วยการกดแป้นไม้ที่มีลักษณะคล้ายกับเปียโนลงไป สายสลิงที่โยงไว้กับแป้นจะทำหน้าที่ดึงค้อนที่แขวนอยู่ด้านในตัวระฆังให้กระทบกับใบระฆังจนเกิดเสียงขึ้นมา การเล่นแบบนี้ต้องออกแรงกดค่อนข้างมากเพราะตัวค้อนแขวนมีน้ำหนักเยอะพอสมควร',
+                    img: 'https://media.discordapp.net/attachments/1036531069572362291/1040533811399774218/558b46325e9a8362.PNG?width=663&height=663',
+                }
+            },
+            methods: {
+                popupClose: function () {
+                    this.isPopup = false
+                },
+                check: function () {
+                    this.isPopup = true
+                    this.popup.title = 'ระฆังการิย็อง'
+                    this.popup.body = `องค์ประกอบของระฆังชุดนี้ก็จะประกอบไปด้วยระฆัง 16 ใบ ที่มีเสียงของโน้ตที่ต่างกันสามารถเล่นเป็นเพลงได้ด้วยการกดแป้นไม้ที่มีลักษณะคล้ายกับเปียโนลงไป สายสลิงที่โยงไว้กับแป้นจะทำหน้าที่ดึงค้อนที่แขวนอยู่ด้านในตัวระฆังให้กระทบกับใบระฆังจนเกิดเสียงขึ้นมา การเล่นแบบนี้ต้องออกแรงกดค่อนข้างมากเพราะตัวค้อนแขวนมีน้ำหนักเยอะพอสมควร`
+                    this.popup.img = 'https://media.discordapp.net/attachments/1036531069572362291/1040533811399774218/558b46325e9a8362.PNG?width=663&height=663'
+
+                }
+            }
+        })
+    </script>
+
 </body>
 
 </html>

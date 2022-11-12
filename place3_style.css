@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maitree&display=swap');
+
+h1,
+h3,
+h5 {
+    margin: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #AED266;
+}
+
+/*CSS ของหน้าสถานที่*/
+#container {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+/*menu bar*/
+.topicon {
+    top: 35px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+}
+
+.kudi_icon {
+    left: 3.5vh;
+    width: 120px;
+}
+
+.topicon_mainmenu {
+    top: 25px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+}
+
+.homemain_icon {
+    right: 3.5vh;
+    width: 68px;
+}
+
+.topicon_menubar {
+    top: 60px;
+    padding-top: 5.5vh;
+    padding-bottom: 2vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    background-color: #F6DCC7;
+    border-bottom-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+}
+
+.home_icon {
+    right: 4vh;
+    width: 62px;
+    margin-top: 0.2vh;
+}
+
+#menubar {
+    right: 3.4vh;
+    display: none;
+    background-color: none;
+}
+
+#menubar a {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/*ท้องฟ้า*/
+#sky {
+    width: 100%;
+    height: 83vh;
+    background-color: #2AD4EB;
+    position: relative;
+    overflow: hidden;
+}
+
+/*เมฆ Animation*/
+.clouds {
+    position: absolute;
+    width: 30vh;
+}
+
+.clouds:nth-child(1) {
+    right: -40vh;
+    top: -2vh;
+    animation: movecloud 20s linear infinite;
+}
+
+.clouds:nth-child(2) {
+    right: -30vh;
+    bottom: 21vh;
+    animation: movecloud 15s linear infinite;
+}
+
+@keyframes movecloud {
+    0% {
+        transform: translatex(0);
+    }
+
+    100% {
+        transform: translatex(-250vh);
+    }
+}
+
+.clouds:nth-child(3) {
+    right: -140vh;
+    top: 18vh;
+    animation: movecloud2 25s linear infinite;
+}
+
+.clouds:nth-child(4) {
+    right: -120vh;
+    bottom: -2vh;
+    animation: movecloud2 17s linear infinite;
+}
+
+@keyframes movecloud2 {
+    0% {
+        transform: translatex(0);
+    }
+
+    100% {
+        transform: translatex(-340vh);
+    }
+}
+
+#clouds_wrap {
+    z-index: -100;
+}
+
+/*ป้ายชื่อเรื่อง*/
+.pic_wrap {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    position: relative;
+}
+
+#pai {
+    width: 70%;
+    display: block;
+    max-width: 1000px;
+}
+
+#pai4 {
+    width: 80%;
+    display: block;
+    max-width: 1000px;
+}
+
+/*แบ่งหน้าซ้าย-ขวา*/
+.left,
+.right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.left {
+    justify-content: right;
+    align-items: center;
+    flex-direction: row;
+}
+
+.right[data-show="small"] {
+    display: none;
+}
+
+.pic_wrap[data-landmark="yes"] {
+    height: 100px;
+}
+
+.left[data-content="people"] {
+    justify-content: left;
+    align-items: baseline;
+    width: 80%;
+    flex-direction: column;
+}
+
+/*พื้นที่ว่างก่อน content*/
+.empty_box {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    position: relative;
+}
+
+/*พื้นดิน*/
+#land {
+    width: 100%;
+    height: auto;
+    background-color: #AED266;
+    position: relative;
+    background-image: url(https://cdn.discordapp.com/attachments/1036192681614909460/1036440695810052198/bg_pattern2.png);
+    background-size: 100%;
+    background-position-y: 20px;
+}
+
+#traveller {
+    position: relative;
+    width: 50%;
+    bottom: 10%;
+    max-width: 180px;
+}
+
+#landmark {
+    position: relative;
+    max-width: 1400px;
+    min-width: 235px;
+    width: 90%;
+}
+
+#contentbox {
+    background-color: #F7F1E3;
+    height: auto;
+    margin-left: 7%;
+    margin-right: 7%;
+    position: relative;
+    padding: 8%;
+    border-radius: 5vh;
+}
+
+#content1,
+#content2 {
+    /*background-color: aqua;*/
+    width: 100%;
+    height: auto;
+}
+
+#content2 {
+    height: 48%;
+    flex-direction: column;
+}
+
+#content2>.left,
+#content2>.right {
+    width: 100%;
+}
+
+#content3 {
+    width: auto;
+    margin-left: 17%;
+    margin-right: 17%;
+    display: flex;
+}
+
+#line {
+    width: auto;
+    background-color: #f25b52;
+    height: 2px;
+}
+
+.navbar {
+    margin: 15%;
+    margin-top: 10%;
+    position: relative;
+    margin-bottom: 0;
+    width: auto;
+    height: 2.5vw;
+    background-color: #F6DCC7;
+    border-radius: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: flex-end;
+}
+
+.iconplace {
+    width: 12%;
+    min-width: 44.2px;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 120px;
+}
+
+.iconplace img {
+    min-width: 44.2px;
+}
+
+.navicon {
+    width: 110px;
+    /* left: -10px; */
+    position: absolute;
+    /* bottom: 7.5%;
+    left: 16.5%; */
+    left: -2.5%;
+    top: -50px;
+}
+
+.title {
+    color: #E85555;
+    font-size: 3rem;
+}
+
+.title2 {
+    color: #E85555;
+    font-size: 2rem;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.place_pic {
+    justify-content: center;
+}
+
+.place_pic img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-radius: 5%;
+}
+
+.font_pinkcolor {
+    font-family: 'Kanit', sans-serif;
+    color: #E85555;
+}
+
+.people {
+    color: #E85555;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.box_detail {
+    width: 90%;
+    /*background-color: #f2f2da;
+    border: #95b682 2px solid;
+    border-radius: 10px;
+    padding: 20px;*/
+}
+
+.detail {
+    color: #05561C;
+    font-size: 16px;
+    font-family: 'Maitree', serif;
+    font-weight: 500;
+}
+
+.picture {
+    width: 57%;
+    border-radius: 15px;
+    height: 43%;
+    background-image: url(รูปถ่าย/IMG_5713.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+}
+
+.content-box {
+    display: none;
+
+    border-radius: 8px;
+    background: #F7F1E3;
+}
+
+.active {
+    display: inline-block;
+    width: 65%;
+    margin: 4%;
+    vertical-align: middle;
+}
+
+.content-prev, .content-next{
+    background: #F7F1E3;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+}
+
+
+.row {
+    display: block;
+    min-height: 1px;
+    margin: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    width: 50%;
+    float: left;
+}
+
+.column2 {
+    width: 15%;
+    float: left;
+}
+
+.column3 {
+    width: 70%;
+    float: left;
+}
+
+.column4 {
+    width: 50%;
+    float: left;
+}
+
+
+.div_desktop {
+    display: block;
+}
+
+.div_media {
+    display: none;
+}
+
+.font_footer {
+    font-size: 1rem;
+    color: #E85555;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #F7F1E3;
+}
+
+
+
+
+
+
+
+
+@media screen and (orientation: portrait) {
+    #sky {
+        height: 70vh;
+    }
+
+    .pic_wrap {
+        flex-direction: column;
+    }
+
+    #traveller {
+        display: none;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .left:nth-child(1) {
+        justify-content: center;
+    }
+
+    #landmark {
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        /* bottom: 25%; */
+        max-width: 800px;
+    }
+
+    #pai {
+        /* min-width: 300px; */
+        min-width: 275px;
+        max-width: 650px;
+    }
+
+    #pai4 {
+        margin-right: 0;
+    }
+
+    .land>.pic_wrap>.left {
+        display: none;
+    }
+
+    #sky>.pic_wrap>.right {
+        /* display: none; */
+        height: 40%;
+    }
+
+    .right[data-show="small"] {
+        display: block;
+    }
+
+    .pic_wrap[data-landmark="yes"] {
+        /* height: 325px; */
+        height: 305px;
+    }
+
+    .div_desktop {
+        display: none;
+    }
+
+    .div_media {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #landmark {
+        left: 0;
+        /* bottom: 25%; */
+    }
+
+    .navbar {
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 20%;
+    }
+
+    #pai {
+        /* min-width: 300px; */
+        min-width: 275px;
+    }
+
+    .pic_wrap[data-landmark="yes"] {
+        height: 100px;
+    }
+
+    /*ตัวอักษร*/
+    .title {
+        font-size: 1.5em;
+    }
+
+    .title2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .people {
+        font-size: 1em;
+    }
+
+    .detail {
+        font-size: 0.7em;
+    }
+
+    .place_pic img {
+        width: 100%;
+    }
+
+    .font_footer {
+        font-size: 0.5rem;
+    }
+
+
+    #contentbox {
+        padding: 1%;
+    }
+
+    .column4 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
+
+    #line {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}

@@ -46,7 +46,7 @@
                 </a>
             </div>
             <a href="javascript:void(0);" onclick="hamburgerbar()">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036238169693245480/IMG_1083.PNG"
+                <img onclick="rot(this)" src="https://cdn.discordapp.com/attachments/1036192681614909460/1036238169693245480/IMG_1083.PNG"
                     class="homemain_icon topicon_mainmenu">
             </a>
         </div>
@@ -336,6 +336,8 @@
         });
 
     </script>
+
+    <!--popup-->
     <script type="text/javascript">
         let vue = new Vue({
             el: '#app',
@@ -360,6 +362,16 @@
                 }
             }
         })
+    </script>
+
+    <!--rotate hamberger-->
+    <script>
+        var count = 0;
+        function rot(e) {
+            count++;
+            var deg = count * 45;
+            e.style.transform = "rotate(" + deg + "deg)";
+        }
     </script>
 
 </body>

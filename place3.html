@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>วัดประยูรวงศาวาส</title>
     <link rel="stylesheet" href="place3_style.css">
-    <link rel="stylesheet" href="slide_style.css">
+    <link rel="stylesheet" href="slideplace3_style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
@@ -46,7 +46,7 @@
                 </a>
             </div>
             <a href="javascript:void(0);" onclick="hamburgerbar()">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036238169693245480/IMG_1083.PNG"
+                <img onclick="rot(this)" src="https://cdn.discordapp.com/attachments/1036192681614909460/1036238169693245480/IMG_1083.PNG"
                     class="homemain_icon topicon_mainmenu">
             </a>
         </div>
@@ -235,7 +235,7 @@
                             <svg viewBox="0 0 61 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M4 41.4282C-1.33334 38.349 -1.33333 30.651 4 27.5718L48.25 2.02404C53.5833 -1.05516 60.25 2.79384 60.25 8.95225L60.25 60.0478C60.25 66.2062 53.5833 70.0552 48.25 66.976L4 41.4282Z"
-                                    fill="#F25B52" />
+                                    fill="#83BB89" />
                             </svg>
                         </a>
                         <!--next button-->
@@ -243,7 +243,7 @@
                             <svg viewBox="0 0 61 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M57 41.4282C62.3333 38.349 62.3333 30.651 57 27.5718L12.75 2.02404C7.41666 -1.05516 0.749999 2.79384 0.749999 8.95225L0.75 60.0478C0.75 66.2062 7.41667 70.0552 12.75 66.976L57 41.4282Z"
-                                    fill="#F25B52" />
+                                    fill="#83BB89" />
                             </svg>
                         </a>
                     </div>
@@ -325,6 +325,16 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+    <!--rotate hamberger-->
+    <script>
+        var count = 0;
+        function rot(e) {
+            count++;
+            var deg = count * 45;
+            e.style.transform = "rotate(" + deg + "deg)";
         }
     </script>
 </body>

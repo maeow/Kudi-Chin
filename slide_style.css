@@ -117,6 +117,7 @@ a.prev svg, a.next svg {
     }
     .column.slide_img2 img {
         width: 100%;
+        padding-top: 1rem;
     }
     .detail.div_media2 {
         margin: 0;

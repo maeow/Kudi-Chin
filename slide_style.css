@@ -1,26 +1,13 @@
 .mySlides {
     display: none;
-    margin-left: 15vmin;
-    margin-right: 15vmin;
+    margin-left: 13vmin;
+    margin-right: 13vmin;
+    background-color: #FFFFFF;
+    border: 0.1rem solid #F25B52;
+    border-radius: 10px;
 }
 
-.column.slide_img {
-    left: 0;
-}
-
-.column.slide_img img {
-    max-width: 40vmin;
-    border-radius: 5%;
-}
-
-.column.slide_detail {
-    right: 0;
-}
-
-.column.slide_detail.h1, .column.slide_detail.p {
-    padding-left: 5vmin;
-}
-
+/*button*/
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -30,48 +17,112 @@
     margin-top: -22px;
     user-select: none;
 }
-
 .next {
     right: 0;
 }
-
 a.prev svg, a.next svg {
     width: 5vmin;
 }
 
+/*place1*/
+.column.slide_img {
+    left: 0;
+}
+.column.slide_img img {
+    max-width: 40vmin;
+    border-radius: 5%;
+}
+.column.slide_detail {
+    right: 0;
+}
+.column.slide_detail.h1, .column.slide_detail.p {
+    padding-left: 5vmin;
+}
+
+.detail.detail.div_media {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*place4*/
+.row_desktop {
+    margin: 0;
+}
+.column.column_media {
+    width: 55%;
+    float: right;
+    margin-top: 5%;
+}
+.column.slide_img2 {
+    width: 100%;
+    text-align: center;
+}
+.column.slide_img2 img {
+    max-width: 15vmax;
+    border-radius: 5%;
+}
+.detail.div_media2 {
+    height: 5em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 @media screen and (max-width: 479px){
-    .prev, .next {
-        top: 25%;
-    }
-
-    .font_pinkcolor{
-        font-size: 1em;
-    }
-
-    .column.slide_img {
+    .column.slide_img, .column.slide_img2 {
         width: 100%;
     }
 
+    /*place1*/
+    .prev, .next {
+        top: 50%;
+    }
+    .font_pinkcolor{
+        font-size: 1em;
+    }
+    .column.slide_img {
+        width: 100%;
+        text-align: center;
+    }
     .column.slide_img img {
         max-width: 35vmin;
     }
-    
     .column.slide_detail {
         width: 100%;
         left: 0;
     }
-
     .column.slide_detail.h1, .column.slide_detail.p {
         padding-left: none;
     }
-
     .row.row_media{
         margin-bottom: 10px;
     }
-
     .detail.div_media {
         height: 10em;
         margin: 0;
         top:-5%;
+    }
+
+
+    /*place4*/
+    .prev.btn_media, .next.btn_media {
+        top: 20vmin;
+    }
+    .column.column_media {
+        width: 100%;
+        float: none;
+        margin-top: 0;
+    }
+    .margin_media {
+        margin-top: 10vmin;
+    }
+    .column.slide_img2 img {
+        width: 100%;
+    }
+    .detail.div_media2 {
+        margin: 0;
+        top:-5%;
+    }
+    .row.row_media2{
+        margin: 0;
     }
 }

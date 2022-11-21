@@ -85,7 +85,7 @@ function secondHide(scrollv, portrait){
         text[1].style.bottom = '100vh';
     }
     else{
-        text[1].style.bottom = '-15vh';
+        text[1].style.bottom = '-20vh';
     }
 }
 function thirdShow(portrait){
@@ -162,9 +162,9 @@ function thirdHide(scrollv, portrait){
         else{
             model[7].style.bottom = '20vh';
             model[7].style.right = '-20vw';
-            model[8].style.bottom = '-40vh';
+            model[8].style.bottom = '-50vh';
             model[8].style.right = '20vw';
-            model[9].style.bottom = '-30vh';
+            model[9].style.bottom = '-40vh';
             model[9].style.right = '10vw';
             model[10].style.top = '-45vh';
             model[10].style.right = '-20vw';
@@ -583,3 +583,8 @@ $(window).scroll(function () {
             }
         }
     // </script>
+
+
+    window.addEventListener("orientationchange", function() {
+        location.reload();
+      }, false)

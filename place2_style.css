@@ -37,15 +37,16 @@ body{
     z-index: 100;
 }
 .homemain_icon{
-    right: 3.5vh;
+    right: 4.5vh;
     width: 68px;
 }
 .topicon_menubar{
+    width: 70px;
     top: 60px;
-    padding-top: 5.5vh;
+    padding-top: 5vh;
     padding-bottom: 2vh;
-    padding-left: 0.5vh;
-    padding-right: 0.5vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
     background-color: #F6DCC7;
     border-bottom-left-radius: 5vh;
     border-bottom-right-radius: 5vh;
@@ -61,12 +62,21 @@ body{
 #menubar{
     right: 3.4vh;
     display: none;
-    background-color: none;
+    text-align: center;
 }
 #menubar a{
     text-decoration: none;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 1vh;
+    font-family: 'Maitree', serif;
+}
+
+.text_menu {
+    display: none;
+    color: #E85555;
+    font-size: 0.7em;
+    font-family: 'Maitree', serif;
+    margin-top: -1vh;
 }
 /*ท้องฟ้า*/
 #sky{
@@ -224,23 +234,26 @@ body{
     background-color: #f25b52;
     height: 2px;
 }
+
+/*footer*/
 .navbar{
-    margin: 15%;
+    margin: 25vmin;
     margin-top: 10%;
     position: relative;
     margin-bottom: 0;
     width: auto;
-    height: 2.5vw;
+    height: 3.5vw;
     background-color: #F6DCC7;
     border-radius: 5vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    padding-bottom: 10px;
+    align-items: baseline;
     align-content: flex-end;
-    padding: 5%;
-    padding-top: 0;
-    padding-bottom: 0;
-    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.navbar a{
+    text-decoration: none;
 }
 .iconplace{
     width: 12%;
@@ -254,17 +267,23 @@ body{
     max-width: 120px;
 }
 .iconplace img{
-    min-width: 44.2px;
+    min-width: 13vmin;
 }
-.navicon{
-    width: 110px;
-    /* left: -10px; */
-    position: absolute;
-    /* bottom: 7.5%;
-    left: 16.5%; */
-    left: -2.5%;
-    top: -50px;
+.iconfooter{
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 22vmin;
+    text-align: center;
+    align-items: center;
 }
+.text_footer {
+    color: #E85555;
+    font-size: 0.8em;
+    font-family: 'Maitree', serif;
+}
+
 .title{
     color: #E85555;
     font-size: 3rem;
@@ -511,11 +530,16 @@ body{
         left: 0;
         /* bottom: 25%; */
     }
-    .navbar{
+    /*footer*/
+    .navbar_wrap{
+        display: none;
+    }
+    /*.navbar{
         margin-left: 7%;
         margin-right: 7%;
         margin-top: 20%;
-    }
+        height: 4vw;
+    }*/
     #pai{
         /* min-width: 300px; */
         min-width: 275px;
@@ -577,5 +601,10 @@ body{
     #line{
         margin-left: 1rem;
         margin-right: 1rem; 
+    }
+
+    /*menubar*/
+    .text_menu {
+        display: block;
     }
 }

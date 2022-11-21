@@ -404,6 +404,19 @@ body{
 }
 
 
+/*CSS of real photo place */
+.column.placephoto {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+/*รูปเจ้าแม่กวนอิม*/
+.column.guanimm {
+    width: 55%;
+    margin-top: 1vmin;
+    text-align: left;
+}
 
 
 @media screen and (orientation: portrait){
@@ -523,5 +536,19 @@ body{
     #line{
         margin-left: 1rem;
         margin-right: 1rem; 
+    }
+
+
+
+    /*CSS of real photo place */
+    .column.placephoto {
+        width: 100%;
+        float: none;
+    }
+
+    /*รูปเจ้าแม่กวนอิม*/
+    .column.guanimm {
+        width: 100%;
+        text-align: center;
     }
 }

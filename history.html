@@ -11,88 +11,166 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 </head>
 <body>
+    <!--Icon-->
+    <div class="iconbutton">
+        <a href="index.html">
+            <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036268468342902814/homeicon.png"
+                class="kudi_icon topicon">
+        </a>
+        <div class="topicon_menubar" id="menubar">
+            <a href="history.html" title="ประวัติศาสตร์ท้องถิ่น">
+                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759322935306/IMG_6298.PNG"
+                    class="home_icon">
+                <h3 class="text_menu">ประวัติศาสตร์ท้องถิ่น</h3>
+            </a>
+            <a href="place.html" title="วัดกัลยาณมิตรวรมหาวิหาร">
+                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759641714738/Untitled_Artwork3.png"
+                    class="home_icon">
+                <h3 class="text_menu">วัดกัลยาณมิตร<br>วรมหาวิหาร</h3>
+            </a>
+            <a href="place2.html" title="โบสถ์ซางตาครูส">
+                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759998234776/Untitled_Artwork4.png"
+                    class="home_icon">
+                <h3 class="text_menu">โบสถ์<br>ซางตาครูส</h3>
+            </a>
+            <a href="place3.html" title="วัดประยุรวงศาวาส">
+                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036281404868264026/Untitled_Artwork5.png"
+                    class="home_icon">
+                <h3 class="text_menu">วัดประยุรวง<br>ศาวาส</h3>
+            </a>
+            <a href="place4.html" title="กุฎีขาว">
+                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280760786759680/Untitled_Artwork2.png"
+                    class="home_icon">
+                <h3 class="text_menu">กุฎีขาว</h3>
+            </a>
+            <a href="place5.html" title="ศาลเจ้ากียนอันเกง">
+                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280761151668254/Untitled_Artwork.png"
+                    class="home_icon">
+                <h3 class="text_menu">ศาลเจ้า<br>เกียนอันเกง</h3>
+            </a>
+        </div>
+        <a href="javascript:void(0);" onclick="hamburgerbar()">
+            <img onclick="rot(this)" src="https://cdn.discordapp.com/attachments/1036192681614909460/1036238169693245480/IMG_1083.PNG"
+                class="homemain_icon topicon_mainmenu" style="transition: 500ms;">
+        </a>
+    </div>
+
+
+    <div class="wrap" id="zero" >
+        <div class="content">
+            <img class="model" src="https://imgur.com/9MzeXXl.png" data-img="paihistory">
+        </div>
+    </div>
     <div class="wrap" id="first" >
         <div class="content">
-            <!-- <div class="model"></div> -->
-            <img class="model" src="https://i.imgur.com/NVKhGNX.png" data-img="bigTemple">
-            <img class="model" src="https://i.imgur.com/GznZsZm.png" data-img="smallTemple">
-            <img class="model" src="https://i.imgur.com/GznZsZm.png" data-img="smallTemple">
+            <img class="model" src="https://imgur.com/P8ttSuG.png" data-img="bigTemple">
+            <img class="model" src="https://imgur.com/NLabyrL.png" data-img="smallTemple">
+            <img class="model" src="https://imgur.com/NLabyrL.png" data-img="smallTemple">
             <div class="text" data-text="first">ชุมชนกุฎีจีนก่อตั้งขึ้นในสมัยกรุงธนบุรีช่วงหลัง<br data-display="landscape">การเสียกรุงศรีอยุธยาครั้งที่สองที่เกิดจากความขัดแย้งทางทหารกับพม่า</div>
         </div>
     </div>
     <div class="wrap" id="second">
         <div class="content">
-            <img class="model" src="https://i.imgur.com/P9ASDrd.png" data-img="Tak">
-            <img class="model" src="https://imgur.com/Q2YDqHN.png" data-img="women">
-            <img class="model" src="https://imgur.com/Q2YDqHN.png" data-img="women">
+            <img class="model" src="https://imgur.com/yS3pDKG.png" data-img="Tak">
+            <img class="model" src="https://imgur.com/X2gJ0iy.png" data-img="women">
+            <img class="model" src="https://imgur.com/X2gJ0iy.png" data-img="women">
             <div class="text" data-text="sec">ภายหลังได้มีการกอบกู้เอกราชและสถาปนาอาณาจักรขึ้นใหม่<br data-display="landscape">เป็นอาณาจักรกรุงธนบุรีภายใต้การปกครองดูแล<br data-display="landscape">ของพระเจ้าสมเด็จกรุงธนบุรี(พระเจ้าตากสิน)</div>
         </div>
     </div>
     <div class="wrap" id="third">
         <div class="content">
-            <img class="model" src="https://imgur.com/BMTKzIh.png" data-img="solder1">
-            <img class="model" src="https://imgur.com/VeUB84I.png" data-img="solder2">
-            <img class="model" src="https://imgur.com/OWdVKQa.png" data-img="solder3" style="z-index: -1;">
-            <img class="model" src="https://imgur.com/Xhmf6nm.png" data-img="solder2">
-            <img class="model" src="https://imgur.com/Ynr1Lrn.png" data-img="solder1">
+            <img class="model" src="https://imgur.com/0gxAIHK.png" data-img="solder1">
+            <img class="model" src="https://imgur.com/N3al8lv.png" data-img="solder2">
+            <img class="model" src="https://imgur.com/5tRGRuD.png" data-img="solder3" style="z-index: -1;">
+            <img class="model" src="https://imgur.com/DckTcNa.png" data-img="solder2">
+            <img class="model" src="https://imgur.com/gxpzFeb.png" data-img="solder1">
             <div class="text" data-text="third">พระองค์ได้รวบรวมไพร่พลที่เคยร่วมรบกันในสงครามกู้เอกราช </div>
         </div>
     </div>
     <div class="wrap" id="forth">
         <div class="content">
-            <img class="model" src="https://imgur.com/SM2ImF7.png" data-img="house">
+            <img class="model" src="https://imgur.com/KWUQpsR.png" data-img="house">
             <img class="model" src="https://imgur.com/IgWAUV5.png" data-img="river">
             <div class="text" data-text="forth">โดยโปรดให้ชาวจีนและชาวพระนครศรีอยุธยา<br data-display="landscape">ตั้งบ้านเรือนอยู่เหนือคลองกุฎีจีนใกล้วัดกัลยาณมิตร</div>
         </div>
     </div>
     <div class="wrap" id="fifth">
         <div class="content">
-            <img class="model" src="https://imgur.com/P4P2K6z.png" data-img="pro_people1">
-            <img class="model" src="https://imgur.com/LSiPUH0.png" data-img="pro_people2">
+            <img class="model" src="https://imgur.com/2lGMPZh.png" data-img="pro_people1">
+            <img class="model" src="https://imgur.com/7hJSr83.png" data-img="pro_people2">
             <div class="text" data-text="fifth">ส่วนชาวคริสต์และโปรตุเกสก็ได้ตั้งบ้านเรือนอยู่ทางริมน้ำใต้คลองลงมา </div>
         </div>
     </div>
-    <!-- <div class="wrap" id="sixth">
+    <div class="wrap" id="sixth">
         <div class="content">
-            <div class="model"></div>
             <img class="model" src="https://imgur.com/FKhAJn5.png" data-img="people1">
             <img class="model" src="https://imgur.com/d7VP9aF.png" data-img="people2">
             <img class="model" src="https://imgur.com/ujaP0hQ.png" data-img="people3">
             <img class="model" src="https://imgur.com/ts5EzYH.png" data-img="people4">
+            <img class="model" src="https://imgur.com/5ww3CQV.png" data-img="oldman">
+            <div class="text" data-text="sixth">กลายเป็นชุมชนที่มีความหลากหลาย<br data-display="landscape">อาทิชาวจีนที่นำสินค้าเข้ามาแบกขายริมฝั่งแม่น้ำที่เรียกว่ากุลีแบกหาม</div>
         </div>
-    </div> -->
-    <!--footer menubar-->
-    <!--<div class="navbar_wrap">
-        <div class="navbar">
-            <a href="history.html" class="iconplace">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759322935306/IMG_6298.PNG">
-            </a>
-            <a href="place.html" class="iconplace">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759641714738/Untitled_Artwork3.png">
-            </a>
-            <a href="place2.html" class="iconplace">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759998234776/Untitled_Artwork4.png">
-            </a>
-            <a href="place3.html" class="iconplace">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036281404868264026/Untitled_Artwork5.png">
-            </a>
-            <a href="place4.html" class="iconplace">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280760786759680/Untitled_Artwork2.png">
-            </a>
-            <a href="place5.html" class="iconplace">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280761151668254/Untitled_Artwork.png">
-            </a>
+    </div>
+    <div class="wrap" id="seventh">
+        <div class="content">
+            <div class="text" data-text="seventh">ทำให้ผู้คนส่วนใหญ่คุ้นเคยและรู้จักชุมชนนี้ว่า ชุมชนกุลีจีน<br data-display="landscape">เนื่องจากเป็นชุมชนที่มีชาวกุลีจีนอยู่เป็นจำนวนมาก</div>
+        </div>
+    </div>
+    <div class="wrap" id="eighth">
+        <div class="content">
+            <img class="model" src="https://imgur.com/gftRBwQ.png" data-img="kudichin">
+            <div class="text" data-text="eighth">ต่อมาเกิดการเรียกที่ผิดเพี้ยนจากชุมชนกุลีจีนจึงกลายเป็น “ชุมชนกุฎีจีน” แทน</div>
         </div>
     </div>
 
-    <footer style="padding-top: 5%;">
-        <center>
-            <h5 class="font_footer">
-                ผลงานของนักศึกษาสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-                คณะสถาปัตยกรรมศาสตร์ และคณะเทคโนโลยีสารสนเทศ
-            </h5>
-        </center>
-    </footer>-->
+     <!--footer menubar-->
+     <!-- <div class="navbar_wrap">
+        <div class="navbar">
+            <div class="iconfooter">
+                <a href="history.html" class="iconplace">
+                    <img
+                        src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759322935306/IMG_6298.PNG">
+                </a>
+                <h3 class="text_footer">ประวัติศาสตร์ท้องถิ่น</h3>
+            </div>
+            <div class="iconfooter">
+                <a href="place.html" class="iconplace">
+                    <img
+                        src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759641714738/Untitled_Artwork3.png">
+                </a>
+                <h3 class="text_footer">วัดกัลยาณมิตรวรมหาวิหาร</h3>
+            </div>
+            <div class="iconfooter">
+                <a href="place2.html" class="iconplace">
+                    <img
+                        src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759998234776/Untitled_Artwork4.png">
+                </a>
+                <h3 class="text_footer">โบสถ์ซางตาครูส</h3>
+            </div>
+            <div class="iconfooter">
+                <a href="place3.html" class="iconplace">
+                    <img
+                        src="https://cdn.discordapp.com/attachments/1036192681614909460/1036281404868264026/Untitled_Artwork5.png">
+                </a>
+                <h3 class="text_footer">วัดประยุรวงศาวาส</h3>
+            </div>
+            <div class="iconfooter">
+                <a href="place4.html" class="iconplace">
+                    <img
+                        src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280760786759680/Untitled_Artwork2.png">
+                </a>
+                <h3 class="text_footer">กุฎีขาว</h3>
+            </div>
+            <div class="iconfooter">
+                <a href="place5.html" class="iconplace">
+                    <img
+                        src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280761151668254/Untitled_Artwork.png">
+                </a>
+                <h3 class="text_footer">ศาลเจ้าเกียนอันเกง</h3>
+            </div>
+        </div>
+    </div> -->
+    
     <script type="text/javascript" src="historyScript.js"></script>
 </body>
 </html>

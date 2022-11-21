@@ -50,6 +50,47 @@ body{
     position: fixed;
 
 }
+.fire{
+    transition: 1s;
+    /* transition-delay: 1s; */
+    position: fixed;
+    /* left: 0; */
+    /* top: 0; */
+    z-index: -1;
+}
+img[data-img="fire1"]{
+    top: 2vh;
+    left: 50vw;
+    width: 15vmax;
+    opacity: 0;
+}
+img[data-img="fire2"]{
+    top: 2vh;
+    right: 50vw;
+    width: 15vmax;
+    opacity: 0;
+}
+img[data-img="fire3"]{
+    top: 12vh;
+    left: 50vw;
+    width: 11vmax;
+    z-index: 1;
+    opacity: 0;
+}
+img[data-img="fire4"]{
+    bottom: 14vh;
+    left: 6vw;
+    width: 11vmax;
+    z-index: -1;
+    opacity: 0;
+}
+img[data-img="fire5"]{
+    bottom: 9vh;
+    right: 6vw;
+    width: 11vmax;
+    z-index: -1;
+    opacity: 0;
+}
 img.model{
     background-color: rgba(255, 0, 0, 0);
 }
@@ -404,6 +445,24 @@ img.model{
     .model[data-img="kudichin"]{
         width: 30vmax;
         left: calc(50% - 15vmax);
+    }
+    img[data-img="fire3"]{
+        top: 7vh;
+    }
+    img[data-img="fire5"]{
+        bottom: 9vh;
+        right: 6vw;
+        width: 11vmax;
+        z-index: -1;
+        opacity: 0;
+    }
+    img[data-img="fire4"]{
+        bottom: 60.5vh;
+        left: 19vw;
+    }
+    img[data-img="fire5"]{
+        bottom: 40vh;
+        right: 23vw;
     }
 }
 

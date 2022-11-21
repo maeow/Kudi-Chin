@@ -5,39 +5,483 @@ var portrait = false;
 var current_scroll = 0;
 var width = window.innerWidth;
 var height = window.innerHeight;
-if(height > width){
-    portrait = true;
+var screen_height = window.innerHeight;
+
+function zeroShow(portrait){
+    model[0].style.top = 'calc(50% - 8vw)';
 }
-
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-//   }
-
-//เริ่มเว็บ
-function codeAddress() {
-    var model = document.querySelectorAll('.model');
-    var text = document.querySelectorAll('.text');
-    var screen_height = window.innerHeight;
-    var scrollv = $(this).scrollTop();
-    if(screen_height > scrollv){
-        if(portrait==false){
-            model[0].style.transform = 'translate(0, 2vh)';
-            model[1].style.transform = 'translate(1vw, -2vh)';
-            model[2].style.transform = 'translate(-1vw, -2vh)';
-            text[0].style.transform = 'translate(-50%, 50%)';
+function zeroHide(portrait){
+    model[0].style.top = 'calc(0% - 8vmax)';
+}
+function firstShow(portrait){
+    if(portrait){
+        model[1].style.top = '2vh';
+        model[2].style.bottom = '55vh';
+        model[2].style.left = '2vw';
+        model[3].style.bottom = '35vh';
+        model[3].style.right = '10vw';
+        text[0].style.top = '72vh'
+    }
+    else{
+        model[1].style.top = '2vh';
+        model[2].style.bottom = '2vh';
+        model[2].style.left = '1.25vw';
+        model[3].style.bottom = '2vh';
+        model[3].style.right = '1.25vw';
+        text[0].style.top = '57vh'
+    }
+}
+function firstHide(scrollv, portrait){
+    if(portrait){
+        model[1].style.top = '-30vh';
+        model[2].style.bottom = '55vh';
+        model[2].style.left = '-58vw';
+        model[3].style.bottom = '35vh';
+        model[3].style.right = '-58vw';
+        if(scrollv>=height*10){
+            text[0].style.top = '-15vh';
         }
         else{
-            model[0].style.transform = 'translate(0, 5vh)';
-            model[1].style.transform = 'translate(7vw, -2vh)';
-            model[2].style.transform = 'translate(-15vw, -2vh)';
-            text[0].style.transform = 'translate(-50%, 25vh)';
+            text[0].style.top = '100vh';
         }
-        text[0].style.transition = '1s';
+    }
+    else{
+        model[1].style.top = '-55vh';
+        model[2].style.bottom = '-30vh';
+        model[2].style.left = '-25vw';
+        model[3].style.bottom = '-30vh';
+        model[3].style.right = '-25vw';
+        if(scrollv>=height*10){
+            text[0].style.top = '-15vh';
+        }
+        else{
+            text[0].style.top = '100vh';
+        }
+    }
+}
+function secondShow(portrait){
+    model[5].style.right = '55vw';
+    model[6].style.left = '55vw';
+    text[1].style.bottom = '10vh'
+    if(portrait){
+        model[4].style.top = '20vh';
+    }
+    else{
+        model[4].style.top = '5vh';
+    }
+}
+function secondHide(scrollv, portrait){
+    model[4].style.top = '-33vmax';
+    model[5].style.right = '100vw';
+    model[6].style.left = '100vw';
+    if(scrollv>=height*16){
+        text[1].style.bottom = '100vh';
+    }
+    else{
+        text[1].style.bottom = '-15vh';
+    }
+}
+function thirdShow(portrait){
+    if(portrait){
+        model[7].style.right = '11vw';
+        model[7].style.bottom = '45vh';
+        model[8].style.bottom = '30vh';
+        model[8].style.right = '0vw';
+        model[9].style.bottom = '50vh';
+        model[9].style.right = '55vw';
+        model[10].style.top = '4vh';
+        model[10].style.right = '-23vw';
+        model[11].style.top = '32vh';
+        model[11].style.right = '64vw';
+        text[2].style.bottom = '15vh'
+    }
+    else{
+        model[7].style.right = '68vw';
+        model[7].style.bottom = '37vh';
+        model[8].style.bottom = '30vh';
+        model[8].style.right = '48vw';
+        model[9].style.bottom = '50vh';
+        model[9].style.right = '46vw';
+        model[10].style.top = '22vh';
+        model[10].style.right = '30vw';
+        model[11].style.top = '36vh';
+        model[11].style.right = '30vw';
+        text[2].style.bottom = '15vh'
+    }
+}
+function thirdHide(scrollv, portrait){
+    if(portrait){
+        if(scrollv>=height*22){
+            model[7].style.right = '100vw';
+            model[7].style.bottom = '45vh';
+            model[8].style.bottom = '30vh';
+            model[8].style.right = '100vw';
+            model[9].style.bottom = '50vh';
+            model[9].style.right = '100vw';
+            model[10].style.top = '4vh';
+            model[10].style.right = '100vw';
+            model[11].style.top = '32vh';
+            model[11].style.right = '100vw';
+            text[2].style.bottom = '100vh'
+        }
+        else{
+            model[7].style.right = '-71vw';
+            model[7].style.bottom = '42vh';
+            model[8].style.bottom = '28vh';
+            model[8].style.right = '-70vw';
+            model[9].style.bottom = '45vh';
+            model[9].style.right = '-55vw';
+            model[10].style.top = '6vh';
+            model[10].style.right = '-73vw';
+            model[11].style.top = '34vh';
+            model[11].style.right = '-54vw';
+            text[2].style.bottom = '-10vh'
+        }
+    }
+    else{
+        if(scrollv>=height*22){
+            model[7].style.bottom = '30vh';
+            model[7].style.right = '100vw';
+            model[8].style.bottom = '20vh';
+            model[8].style.right = '100vw';
+            model[9].style.bottom = '15vh';
+            model[9].style.right = '100vw';
+            model[10].style.top = '8vh';
+            model[10].style.right = '100vw';
+            model[11].style.top = '80vh';
+            model[11].style.right = '100vw';
+            text[2].style.bottom = '100vh'
+        }
+        else{
+            model[7].style.bottom = '20vh';
+            model[7].style.right = '-20vw';
+            model[8].style.bottom = '-40vh';
+            model[8].style.right = '20vw';
+            model[9].style.bottom = '-30vh';
+            model[9].style.right = '10vw';
+            model[10].style.top = '-45vh';
+            model[10].style.right = '-20vw';
+            model[11].style.top = '50vh';
+            model[11].style.right = '-15vw';
+            text[2].style.bottom = '-10vh'
+        }
+    }
+}
+function forthShow(portrait){
+   if(portrait){
+        model[12].style.right = '20vw';
+        model[13].style.bottom = '0vh';
+        text[3].style.top = '10vh'
+   }
+   else{
+        model[12].style.right = 'calc(50% - 16vmax)';
+        model[13].style.bottom = '-33vh';
+        text[3].style.top = '15vh'
+   }
+}
+function forthHide(scrollv, portrait){
+    if(portrait){
+        model[12].style.right = '100vw';
+        model[13].style.bottom = '-33vh';
+        if(scrollv>=height*28){
+            text[3].style.top = '-20vh'
+        }
+        else{
+            text[3].style.top = '100vh'
+        }
+    }
+    else{
+        model[12].style.right = '100vw';
+        model[13].style.bottom = '-60vh';
+        if(scrollv>=height*28){
+            text[3].style.top = '-20vh'
+        }
+        else{
+            text[3].style.top = '100vh'
+        }
+    }
+}
+function fifthShow(portrait){
+    text[4].style.bottom = '20vh'
+    model[14].style.top = '20vh';
+    model[14].style.right = '50vw';
+    model[15].style.top = '20vh';
+    model[15].style.left = '50vw';
+    model[14].style.transform = 'none'
+    model[15].style.transform = 'none'
+}
+function fifthHide(scrollv, portrait){
+    if(portrait){
+        if(scrollv>=height*34 && scrollv<height*42){
+            if(scrollv>=height*36){
+                // เปลี่ยนเลย์เอาท์
+            model[14].style.top = '40vh';
+            model[14].style.right = '63vw';
+            model[15].style.top = '45vh';
+            model[15].style.left = '18vw';
+            text[4].style.bottom = '100vh'
+            model[14].style.transform = 'scale(0.65)';
+            model[15].style.transform = 'scale(0.65)';
+            }
+        }
+        else if(scrollv<height*30){
+            // ก่อนเริ่ม
+            model[14].style.top = '30vh';
+            model[14].style.right = '100vw';
+            model[15].style.top = '30vh';
+            model[15].style.left = '100vw';
+            text[4].style.bottom = '-10vh'
+        }
+        else{
+            // จบสุด
+            model[14].style.top = '40vh';
+            model[14].style.right = '100vw';
+            model[15].style.top = '50vh';
+            model[15].style.left = '-40vw';
+            model[14].style.transform = 'scale(0.65)';
+            model[15].style.transform = 'scale(0.65)';
+        }
+    }
+    else{
+        if(scrollv>=height*34 && scrollv<height*42){
+            if(scrollv>=height*36){
+                // เปลี่ยนเลย์เอาท์
+            model[14].style.top = '30vh';
+            model[14].style.right = '63vw';
+            model[15].style.top = '20vh';
+            model[15].style.left = '15.5vw';
+            text[4].style.bottom = '100vh'
+            }
+        }
+        else if(scrollv<height*30){
+            // ก่อนเริ่ม
+            model[14].style.top = '20vh';
+            model[14].style.right = '100vw';
+            model[15].style.top = '20vh';
+            model[15].style.left = '100vw';
+            text[4].style.bottom = '-10vh'
+        }
+        else{
+            // จบสุด
+            model[14].style.top = '100vh';
+            model[14].style.right = '63vw';
+            model[15].style.top = '100vh';
+            model[15].style.left = '15.5vw';
+        }
+    }
+}
+function sixthShow(portrait){
+    if(portrait){
+        model[16].style.top = '28vh';
+        model[16].style.left = '25vw';
+        model[17].style.bottom = '40vh';
+        model[17].style.right = '10vw';
+        model[18].style.top = '16vh';
+        model[18].style.right = '10vw';
+        model[19].style.bottom = '30vh';
+        model[19].style.right = '20vw';
+        model[20].style.top = '15vh';
+        model[20].style.left = '0vw';
+        model[20].style.transform = 'none'
+        text[5].style.bottom = '10vh'
+    }
+    else{
+        model[16].style.top = '18vh';
+        model[16].style.left = '36vw';
+        model[17].style.bottom = '28vh';
+        model[17].style.right = '40vw';
+        model[18].style.top = '10vh';
+        model[18].style.right = '26vw';
+        model[19].style.bottom = '30vh';
+        model[19].style.right = '20vw';
+        model[20].style.top = '10vh';
+        model[20].style.left = '27vw';
+        model[20].style.transform = 'none'
+        text[5].style.bottom = '10vh'
+    }
+}
+function sixthHide(scrollv, portrait){
+    if(portrait){
+        if(scrollv>=height*42 && scrollv<height*46){
+            // เปลี่ยนหน้า
+            model[16].style.top = '28vh';
+            model[16].style.left = '100vw';
+            model[17].style.bottom = '25vh';
+            model[17].style.right = '-30vw';
+            model[18].style.top = '16vh';
+            model[18].style.right = '100vw';
+            model[19].style.bottom = '38vh';
+            model[19].style.right = '100vw';
+            model[20].style.top = '30vh';
+            model[20].style.left = 'calc(50% - 10.5vmax)';
+            model[20].style.transform = 'scale(2)'
+            text[5].style.bottom = '100vh'
+            model[20].style.opacity = '1';
+        }
+        else if(scrollv>=height*46){
+            // ลุงหาย
+            // model[20].style.left = '-20vw';
+            model[20].style.opacity = '0';
+        }
+        else{
+            // เริ่มต้น
+            model[16].style.top = '-30vh';
+            model[16].style.left = '20vw';
+            model[17].style.bottom = '40vh';
+            model[17].style.right = '-30vw';
+            model[18].style.top = '-20vh';
+            model[18].style.right = '-50vw';
+            model[19].style.bottom = '25vh';
+            model[19].style.right = '-30vw';
+            model[20].style.top = '-40vh';
+            model[20].style.left = '35vw';
+            model[20].style.transform = 'none'
+            text[5].style.bottom = '-10vh'
+        }
+    }
+    else{
+        if(scrollv>=height*42 && scrollv<height*46){
+            model[16].style.top = '100vh';
+            model[16].style.left = '27vw';
+            model[17].style.bottom = '-40vh';
+            model[17].style.right = '47vw';
+            model[18].style.top = '100vh';
+            model[18].style.right = '33vw';
+            model[19].style.bottom = '-40vh';
+            model[19].style.right = '20vw';
+            model[20].style.top = '30vh';
+            model[20].style.left = '60vw';
+            model[20].style.transform = 'scale(1.3)'
+            text[5].style.bottom = '100vh'
+        }
+        else if(scrollv>=height*46){
+            model[20].style.left = '-20vw';
+        }
+        else{
+            model[16].style.top = '100vh';
+            model[16].style.left = '-10vw';
+            model[17].style.bottom = '-40vh';
+            model[17].style.right = '20vw';
+            model[18].style.top = '0vh';
+            model[18].style.right = '-30vw';
+            model[19].style.bottom = '-30vh';
+            model[19].style.right = '-20vw';
+            model[20].style.top = '-40vh';
+            model[20].style.left = '35vw';
+            model[20].style.transform = 'none'
+            text[5].style.bottom = '-10vh'
+        }
+    }
+}
+function seventhShow(portrait){
+    if(portrait){
+        text[6].style.opacity = '1';
+        text[6].style.bottom = '15vh'
+    }
+    else{
+        text[6].style.bottom = '35vh'
+        text[6].style.right = '7vw'
+    }
+}
+function seventhHide(scrollv, portrait){
+    if(portrait){
+        text[6].style.opacity = '0';
+    }
+    else{
+        if(scrollv>=height*46){
+            text[6].style.bottom = '100vh'
+            text[6].style.right = '0vw'
+        }
+        else{
+            text[6].style.bottom = '-15vh'
+            text[6].style.right = '0vw'
+        }
+    }
+}
+function eighthShow(portrait){
+    if(portrait){
+        model[21].style.top = '32vh';
+        text[7].style.top = '47vh'
+    }
+    else{
+        model[21].style.top = '27vh';
+        text[7].style.top = '57vh'
+    }
+}
+function eighthHide(scrollv, portrait){
+    model[21].style.top = '100vh';
+    text[7].style.top = '100vh'
+}
+// alert(model[1].getAttribute('data-img'))
+
+function codeAddress(){
+    var scrollv = $(this).scrollTop();
+    // check แนวจอ
+    if(window.innerHeight > window.innerWidth){
+        portrait = true;
+    }
+    else{
+        portrait = false;
+    }
+    //
+
+    if(scrollv < height*4){
+        zeroShow(portrait);
+    }else{
+        zeroHide(portrait);
+    }
+    if(scrollv >= height*6 && scrollv < height*10){
+        firstShow(portrait);
+     }
+     else{
+        firstHide(scrollv, portrait);
+     }
+    if(scrollv >= height*12 && scrollv < height*16){
+       secondShow(portrait);
+    }
+    else{
+       secondHide(scrollv, portrait);
+    }
+    if(scrollv >= height*18 && scrollv < height*22){
+        thirdShow(portrait);
+    }
+    else{
+        thirdHide(scrollv, portrait);
+    }
+    if(scrollv >= height*24 && scrollv < height*28){
+        forthShow(portrait);
+    }
+    else{
+        forthHide(scrollv,  portrait);
+    }
+    if(scrollv >= height*30 && scrollv < height*36){
+        fifthShow(portrait);
+    }
+    else{
+        fifthHide(scrollv, portrait);
+    }
+    if(scrollv >= height*36 && scrollv < height*42){
+        sixthShow(portrait);
+    }
+    else{
+        sixthHide(scrollv, portrait);
+    }
+    if(scrollv >= height*42 && scrollv < height*46){
+        seventhShow(portrait);
+    }
+    else{
+        seventhHide(scrollv, portrait);
+    }
+    if(scrollv >= height*48){
+        eighthShow(portrait);
+    }
+    else{
+        eighthHide(scrollv, portrait);
     }
 }
 
-//scroll
 $(window).scroll(function () {
+    // check แนวจอ
     if(window.innerHeight > window.innerWidth){
         portrait = true;
     }
@@ -45,405 +489,90 @@ $(window).scroll(function () {
         portrait = false;
     }
     var scrollv = $(this).scrollTop();
-    var screen_height = window.innerHeight;
-    console.log("window : "+screen_height)
-    console.log("page : "+scrollv.toFixed())
-    // รูปกลุ่มแรก
-    if(portrait == false){
-        if(scrollv >= screen_height*2 && scrollv > current_scroll){
-            model[0].style.transform = 'translate(-10%, -100%)';
-            model[1].style.transform = 'translate(-50%, 100%)';
-            model[2].style.transform = 'translate(50%, 100%)';
-            text[0].style.transform = 'translate(-50%, -80vh)';
-        }
-        else if(scrollv > current_scroll && scrollv >= screen_height*0){
-            text[0].style.transition = '1s';
-            model[0].style.transform = 'translate(0, 2vh)';
-            model[1].style.transform = 'translate(1vw, -2vh)';
-            model[2].style.transform = 'translate(-1vw, -2vh)';
-            text[0].style.transform = 'translate(-50%, 50%)';
-        }
-        else if(scrollv < current_scroll && scrollv < screen_height*0){
-            model[0].style.transform = 'translate(-10%, -100%)';
-            model[1].style.transform = 'translate(-50%, 100%)';
-            model[2].style.transform = 'translate(50%, 100%)';
-            text[0].style.transform = 'translate(-50%, -80vh)';
-        }
-        else if(scrollv < current_scroll && scrollv < screen_height*2){
-            text[0].style.transition = '1s';
-            model[0].style.transform = 'translate(0, 2vh)';
-            model[1].style.transform = 'translate(1vw, -2vh)';
-            model[2].style.transform = 'translate(-1vw, -2vh)';
-            text[0].style.transform = 'translate(-50%, 50%)';
-        }
-        else{
-            model[0].style.transform = 'translate(-10%, -100%)';
-            model[1].style.transform = 'translate(-50%, 100%)';
-            model[2].style.transform = 'translate(50%, 100%)';
-            text[0].style.transform = 'translate(-50%, -80vh)';
-        }
+    // 
 
-    // รูปกลุ่มสอง
-    if(scrollv >= screen_height*6 && scrollv > current_scroll){
-        model[3].style.transform = 'translate(0%, -100%)';
-        model[4].style.transform = 'translate(-150%, 0%) scaleX(-1)';
-        model[5].style.transform = 'translate(150%, 0%)';
-        text[1].style.transform = 'translate(-50%, -80vh)';
-    }
-    else if(scrollv > current_scroll && scrollv >= screen_height*4){
-        model[3].style.transform = 'translate(0, 5vh)';
-        model[4].style.transform = 'translate(25vw, 0%) scaleX(-1)';
-        model[5].style.transform = 'translate(-25vw, 0%)';
-        text[1].style.transform = 'translate(-50%, 25vh)';
-        text[1].style.transition = '1s';
-    }
-    else if(scrollv < current_scroll && scrollv < screen_height*4){
-        model[3].style.transform = 'translate(0%, -100%)';
-        model[4].style.transform = 'translate(-150%, 0%) scaleX(-1)';
-        model[5].style.transform = 'translate(150%, 0%)';
-        text[1].style.transform = 'translate(-50%, 50vh)';
-    }
-    else if(scrollv < current_scroll && scrollv < screen_height*6){
-        model[3].style.transform = 'translate(0, 5vh)';
-        model[4].style.transform = 'translate(25vw, 0%) scaleX(-1)';
-        model[5].style.transform = 'translate(-25vw, 0%)';
-        text[1].style.transform = 'translate(-50%, 25vh)';
-        text[1].style.transition = '1s';
+    console.log(scrollv)
+    if(scrollv < height*4){
+        zeroShow(portrait);
     }
     else{
-        model[3].style.transform = 'translate(0%, -100%)';
-        model[4].style.transform = 'translate(-150%, 0%) scaleX(-1)';
-        model[5].style.transform = 'translate(150%, 0%)';
-        text[1].style.transform = 'translate(-50%, 50vh)';
+        zeroHide(portrait);
     }
-    if(scrollv>screen_height*6){
-        text[1].style.transform = 'translate(-50%, -80vh)';
-    }
-
-    //กลุ่มสาม
-    if(screen_height*8 > scrollv){
-        model[6].style.transform = 'translate(100%, 5%)';
-        model[7].style.transform = 'translate(20%, 100%)';
-        model[8].style.transform = 'translate(20%, 100%)';
-        model[9].style.transform = 'translate(100%, -100%)';
-        model[10].style.transform = 'translate(100%, 0)';
-        text[2].style.transform = 'translate(-50%, 50vh)';
-    }
-    else if(scrollv >= screen_height*10 && scrollv > current_scroll){
-        model[6].style.transform = 'translate(-100vw, -2vw)';
-        model[7].style.transform = 'translate(-100vw, 1vw)';
-        model[8].style.transform = 'translate(-100vw, 0)';
-        model[9].style.transform = 'translate(-100vw, 1vw)';
-        model[10].style.transform = 'translate(-100vw, 1.5vw)';
-        text[2].style.transform = 'translate(-50%, -60vh)';
-    }
-    else if(scrollv >= screen_height*8 && current_scroll < scrollv){
-        model[6].style.transform = 'translate(-73vw, -15vh)';
-        model[7].style.transform = 'translate(-25vw, -30vh)';
-        model[8].style.transform = 'translate(-39.5vw, -49vh)';
-        model[9].style.transform = 'translate(-30vw, 21vh)';
-        model[10].style.transform = 'translate(-31vw, -18vh)';
-        text[2].style.transform = 'translate(-50%, 30vh)';
-        text[2].style.transition = '1s';
-        for(let i = 6; i <= 10 ; i++){
-            model[i].style.transition = '1.5s';
-        }
-    }
-    else if(scrollv < screen_height*8 && current_scroll >scrollv){
-        model[6].style.transform = 'translate(100%, 5%)';
-        model[7].style.transform = 'translate(20%, 100%)';
-        model[8].style.transform = 'translate(20%, 100%)';
-        model[9].style.transform = 'translate(100%, -100%)';
-        model[10].style.transform = 'translate(100%, 0)';
-        text[2].style.transform = 'translate(-50%, 50vh)';
-    }
-    else if(scrollv < screen_height*10 && current_scroll > scrollv){
-        model[6].style.transform = 'translate(-73vw, -15vh)';
-        model[7].style.transform = 'translate(-25vw, -30vh)';
-        model[8].style.transform = 'translate(-39.5vw, -49vh)';
-        model[9].style.transform = 'translate(-30vw, 21vh)';
-        model[10].style.transform = 'translate(-31vw, -18vh)';
-        text[2].style.transform = 'translate(-50%, 30vh)';
-        text[2].style.transition = '1s';
-        for(let i = 6; i <= 10 ; i++){
-            model[i].style.transition = '1.5s';
-        }
+    if(scrollv >= height*6 && scrollv < height*10){
+        firstShow(portrait);
+     }
+     else{
+        firstHide(scrollv, portrait);
+     }
+    if(scrollv >= height*12 && scrollv < height*16){
+       secondShow(portrait);
     }
     else{
-        model[6].style.transform = 'translate(-100vw, -2vw)';
-        model[7].style.transform = 'translate(-100vw, 1vw)';
-        model[8].style.transform = 'translate(-100vw, 0)';
-        model[9].style.transform = 'translate(-100vw, 1vw)';
-        model[10].style.transform = 'translate(-100vw, 1.5vw)';
-        text[2].style.transform = 'translate(-50%, -60vh)';
+       secondHide(scrollv,portrait);
     }
-
-    //กลุ่มสี่
-    if(scrollv >= screen_height*14 && scrollv > current_scroll){
-        model[11].style.transform = 'translate(-100%, 0%)';
-        model[12].style.transform = 'translate(0%, 100%)';
-        text[3].style.transform = 'translate(-50%, -60vh)';
+    if(scrollv >= height*18 && scrollv < height*22){
+        thirdShow(portrait);
     }
-    else if(scrollv >= screen_height*12 && scrollv > current_scroll){
-        model[11].style.transform = 'translate(37.5vw, 0%)';
-        model[12].style.transform = 'translate(0%, 32vh)';
-        text[3].style.transform = 'translate(-50%, -35vh)';
-        text[3].style.transition = '1s';
+     else{
+        thirdHide(scrollv, portrait);
     }
-    else if(scrollv < screen_height*12 && current_scroll >scrollv){
-        model[11].style.transform = 'translate(-100%, 0%)';
-        model[12].style.transform = 'translate(0%, 100%)';
-        text[3].style.transform = 'translate(-50%, 50vh)';
+    if(scrollv >= height*24 && scrollv < height*28){
+        forthShow(portrait);
     }
-    else if(scrollv < screen_height*14 && current_scroll > scrollv){
-        model[11].style.transform = 'translate(37.5vw, 0%)';
-        model[12].style.transform = 'translate(0%, 32vh)';
-        text[3].style.transform = 'translate(-50%, -35vh)';
-        text[3].style.transition = '1s';
+     else{
+        forthHide(scrollv, portrait);
+    }
+    if(scrollv >= height*30 && scrollv < height*36){
+        fifthShow(portrait);
     }
     else{
-        model[11].style.transform = 'translate(-100%, 0%)';
-        model[12].style.transform = 'translate(0%, 100%)';
-        text[3].style.transform = 'translate(-50%, 50vh)';
+        fifthHide(scrollv, portrait);
     }
-    if(scrollv>screen_height*14){
-        text[3].style.transform = 'translate(-50%, -60vh)';
+    if(scrollv >= height*36 && scrollv < height*42){
+        sixthShow(portrait);
     }
-
-    //กลุ่มห้า
-    if(scrollv >= screen_height*18 && scrollv > current_scroll){
-        // pass
+    else{
+        sixthHide(scrollv, portrait);
     }
-    else if(scrollv >= screen_height*16 && scrollv > current_scroll){
-        model[13].style.transform = 'translate(38vw, 20vh)';
-        model[14].style.transform = 'translate(-38vw, 20vh)';
-        text[4].style.transform = 'translate(-50%, 25vh)';
-        text[4].style.transition = '1s';
+    if(scrollv >= height*42 && scrollv < height*46){
+        seventhShow(portrait);
     }
-    else if(scrollv < screen_height*16 && current_scroll >scrollv){
-        model[13].style.transform = 'translate(-100%, -100%)';
-        model[14].style.transform = 'translate(100%, -100%)';
-        text[4].style.transform = 'translate(-50%, 50vh)';
+    else{
+        seventhHide(scrollv, portrait);
     }
-    else if(scrollv < screen_height*18 && current_scroll > scrollv){
-        model[13].style.transform = 'translate(38vw, 20vh)';
-        model[14].style.transform = 'translate(-38vw, 20vh)';
-        text[4].style.transform = 'translate(-50%, 25vh)';
-        text[4].style.transition = '1s';
+    if(scrollv >= height*48){
+        eighthShow(portrait);
     }
-
-    //กลุ่มหก
-    if(scrollv > screen_height*18){
-        if(scrollv >= screen_height*22 && scrollv > current_scroll){
-            model[13].style.transform = 'translate(18vw, 120vh)';
-            model[14].style.transform = 'translate(-80vw, 120vh)';
-        }
-        else if(scrollv >= screen_height*20 && scrollv > current_scroll){
-            text[4].style.transform = 'translate(-50%, -60vh)';
-            model[13].style.transform = 'translate(18vw, 35vh)';
-            model[14].style.transform = 'translate(-80vw, 25vh)';
-        }
-        else if(scrollv < screen_height*20 && current_scroll >scrollv){
-            model[13].style.transform = 'translate(38vw, 20vh)';
-            model[14].style.transform = 'translate(-38vw, 20vh)';
-            text[4].style.transform = 'translate(-50%, 25vh)';
-        }
-        else if(scrollv < screen_height*22 && current_scroll > scrollv){
-            model[13].style.transform = 'translate(18vw, 35vh)';
-            model[14].style.transform = 'translate(-80vw, 25vh)';
-        }
+    else{
+        eighthHide(scrollv, portrait);
     }
-
-    if(scrollv >= screen_height*22 && scrollv > current_scroll){
-        model[15].style.transform = 'translate(100%, -100%)';
-        model[16].style.transform = 'translate(-100%, 100%)';
-        model[17].style.transform = 'translate(100%, 100%)';
-        model[18].style.transform = 'translate(100%, -100%)';
-        model[19].style.transform = 'translate(100%, 100%)';
-    }
-    else if(scrollv >= screen_height*20 && scrollv > current_scroll){
-        model[15].style.transform = 'translate(-100%, 30%)';
-        model[16].style.transform = 'translate(32.5vw, )';
-        model[17].style.transform = 'translate(-70%, -90%)';
-        model[18].style.transform = 'translate(-100%, 30%)';
-        model[19].style.transform = 'translate(-50%, -90%)';
-    }
-    else if(scrollv < screen_height*20 && current_scroll >scrollv){
-        model[15].style.transform = 'translate(100%, -100%)';
-        model[16].style.transform = 'translate(-100%, 100%)';
-        model[17].style.transform = 'translate(100%, 100%)';
-        model[18].style.transform = 'translate(100%, -100%)';
-        model[19].style.transform = 'translate(100%, 100%)';
-    }
-    else if(scrollv < screen_height*22 && current_scroll > scrollv){
-        model[15].style.transform = 'translate(-100%, 30%)';
-        model[16].style.transform = 'translate(32.5vw, 90%)';
-        model[17].style.transform = 'translate(-70%, -90%)';
-        model[18].style.transform = 'translate(-100%, 30%)';
-        model[19].style.transform = 'translate(-50%, -90%)';
-    }
-    }
-
-    // portrait
-    else if(portrait){
-        // รูปกลุ่มแรก
-        if(scrollv >= screen_height*2 && scrollv > current_scroll){
-            model[0].style.transform = 'translate(-10%, -100%)';
-            model[1].style.transform = 'translate(-100%, 0%)';
-            model[2].style.transform = 'translate(100%, 100%)';
-            text[0].style.transform = 'translate(-50%, -80vh)';
-        }
-        else if(scrollv > current_scroll && scrollv >= screen_height*0){
-            text[0].style.transition = '1s';
-            model[0].style.transform = 'translate(0, 5vh)';
-            model[1].style.transform = 'translate(7vw, -2vh)';
-            model[2].style.transform = 'translate(-15vw, -2vh)';
-            text[0].style.transform = 'translate(-50%, 25vh)';
-        }
-        else if(scrollv < current_scroll && scrollv < screen_height*0){
-            model[0].style.transform = 'translate(-10%, -100%)';
-            model[1].style.transform = 'translate(-100%, 0%)';
-            model[2].style.transform = 'translate(100%, 100%)';
-            text[0].style.transform = 'translate(-50%, -80vh)';
-        }
-        else if(scrollv < current_scroll && scrollv < screen_height*2){
-            text[0].style.transition = '1s';
-            model[0].style.transform = 'translate(0, 5vh)';
-            model[1].style.transform = 'translate(7vw, -2vh)';
-            model[2].style.transform = 'translate(-15vw, -2vh)';
-            text[0].style.transform = 'translate(-50%, 25vh)';
-        }
-        else{
-            model[0].style.transform = 'translate(-10%, -100%)';
-            model[1].style.transform = 'translate(-100%, 0%)';
-            model[2].style.transform = 'translate(100%, 100%)';
-            text[0].style.transform = 'translate(-50%, -80vh)';
-        }
-
-        // รูปกลุ่มสอง
-        if(scrollv >= screen_height*6 && scrollv > current_scroll){
-            model[3].style.transform = 'translate(0%, -100%)';
-            model[4].style.transform = 'translate(-150%, 0%) scaleX(-1)';
-            model[5].style.transform = 'translate(150%, 0%)';
-            text[1].style.transform = 'translate(-50%, -80vh)';
-        }
-        else if(scrollv > current_scroll && scrollv >= screen_height*4){
-            model[3].style.transform = 'translate(0, 18vh)';
-            model[4].style.transform = 'translate(1vw, 0%) scaleX(-1)';
-            model[5].style.transform = 'translate(-1vw, 0%)';
-            text[1].style.transform = 'translate(-50%, 25vh)';
-            text[1].style.transition = '1s';
-        }
-        else if(scrollv < current_scroll && scrollv < screen_height*4){
-            model[3].style.transform = 'translate(0%, -100%)';
-            model[4].style.transform = 'translate(-150%, 0%) scaleX(-1)';
-            model[5].style.transform = 'translate(150%, 0%)';
-            text[1].style.transform = 'translate(-50%, 50vh)';
-        }
-        else if(scrollv < current_scroll && scrollv < screen_height*6){
-            model[3].style.transform = 'translate(0, 18vh)';
-            model[4].style.transform = 'translate(1vw, 0%) scaleX(-1)';
-            model[5].style.transform = 'translate(-1vw, 0%)';
-            text[1].style.transform = 'translate(-50%, 25vh)';
-            text[1].style.transition = '1s';
-        }
-        //กลุ่มสาม
-        if(scrollv >= screen_height*10 && scrollv > current_scroll){
-            model[6].style.transform = 'translate(-100vw, -9vh)';
-            model[7].style.transform = 'translate(-100vw, -8vh)';
-            model[8].style.transform = 'translate(-100vw, 0)';
-            model[9].style.transform = 'translate(-100vw, 0vw)';
-            model[10].style.transform = 'translate(-100vw, 0vw)';
-            text[2].style.transform = 'translate(-50%, -60vh)';
-        }
-        else if(scrollv >= screen_height*8 && current_scroll < scrollv){
-            model[6].style.transform = 'translate(-25vw, -7vh)';
-            model[7].style.transform = 'translate(-5vw, -6vh)';
-            model[8].style.transform = 'translate(-50vw, 0%)';
-            model[9].style.transform = 'translate(10vw, 2vh)';
-            model[10].style.transform = 'translate(-64vw, 0)';
-            text[2].style.transform = 'translate(-50%, 30vh)';
-            text[2].style.transition = '1s';
-            for(let i = 6; i <= 10 ; i++){
-                model[i].style.transition = '1.5s';
-            }
-        }
-        else if(scrollv < screen_height*8 && current_scroll >scrollv){
-            model[6].style.transform = 'translate(100%, 50%)';
-            model[7].style.transform = 'translate(100%, 50%)';
-            model[8].style.transform = 'translate(100%, 10%)';
-            model[9].style.transform = 'translate(100%, 30%)';
-            model[10].style.transform = 'translate(100%, 20%)';
-            text[2].style.transform = 'translate(-50%, 50vh)';
-        }
-        else if(scrollv < screen_height*10 && current_scroll > scrollv){
-            model[6].style.transform = 'translate(-25vw, -7vh)';
-            model[7].style.transform = 'translate(-5vw, -6vh)';
-            model[8].style.transform = 'translate(-50vw, 0%)';
-            model[9].style.transform = 'translate(10vw, 2vh)';
-            model[10].style.transform = 'translate(-64vw, 0)';
-            text[2].style.transform = 'translate(-50%, 30vh)';
-            text[2].style.transition = '1s';
-            for(let i = 6; i <= 10 ; i++){
-                model[i].style.transition = '1.5s';
-            }
-        }
-
-        // //กลุ่มสี่
-        if(scrollv >= screen_height*14 && scrollv > current_scroll){
-            model[11].style.transform = 'translate(-100%, 0%)';
-            model[12].style.transform = 'translate(0%, 100%)';
-            text[3].style.transform = 'translate(-50%, -60vh)';
-        }
-        else if(scrollv >= screen_height*12 && scrollv > current_scroll){
-            model[11].style.transform = 'translate(0%, 0%)';
-            model[12].style.transform = 'translate(0, 0%)';
-            text[3].style.transform = 'translate(-50%, -35vh)';
-            text[3].style.transition = '1s';
-        }
-        else if(scrollv < screen_height*12 && current_scroll >scrollv){
-            model[11].style.transform = 'translate(-100%, 0%)';
-            model[12].style.transform = 'translate(0%, 100%)';
-            text[3].style.transform = 'translate(-50%, 50vh)';
-        }
-        else if(scrollv < screen_height*14 && current_scroll > scrollv){
-            model[11].style.transform = 'translate(0%, 0%)';
-            model[12].style.transform = 'translate(0, 0%)';
-            text[3].style.transform = 'translate(-50%, -35vh)';
-            text[3].style.transition = '1s';
-        }
-
-        //กลุ่มห้า
-    if(scrollv >= screen_height*18 && scrollv > current_scroll){
-        // pass
-    }
-    else if(scrollv >= screen_height*16 && scrollv > current_scroll){
-        model[13].style.transform = 'translate(6vw, 0%)';
-        model[14].style.transform = 'translate(-6vw, 0%)';
-        text[4].style.transform = 'translate(-50%, 25vh)';
-        text[4].style.transition = '1s';
-    }
-    else if(scrollv < screen_height*16 && current_scroll >scrollv){
-        model[13].style.transform = 'translate(-100%, 0%)';
-        model[14].style.transform = 'translate(100%, 0%)';
-        text[4].style.transform = 'translate(-50%, 50vh)';
-    }
-    else if(scrollv < screen_height*18 && current_scroll > scrollv){
-        model[13].style.transform = 'translate(6vw, 0%)';
-        model[14].style.transform = 'translate(-6vw, 0%)';
-        text[4].style.transform = 'translate(-50%, 25vh)';
-        text[4].style.transition = '1s';
-    }
-    }
-
     current_scroll = scrollv;
-})
+});
 
-// resize
-// function changeSize() {
-//     if(window.innerHeight > window.innerWidth != height > width){
-//         location.reload();
-//     }
-// }
+// <!--menubar function-->
+    // <script>
+        function hamburgerbar() {
+            var x = document.getElementById("menubar");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    // </script>
 
-//   window.onresize = changeSize;
+    // <!--rotate hamberger-->
+    // <script>
+        var count = 0;
+        function rot(e) {
+            count++;
+            if (count%2 == 1) {
+                var deg = 135;
+                e.style.transform = "rotate(" + deg + "deg)";
+            }
+            else {
+                var deg = 0;
+                e.style.transform = "rotate(" + deg + "deg)";
+            }
+        }
+    // </script>

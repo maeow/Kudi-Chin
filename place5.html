@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ศาลเจ้าเกียนอันแกง</title>
+    <title>ศาลเจ้าเกียนอันเกง</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
@@ -19,34 +19,40 @@
                     class="kudi_icon topicon">
             </a>
             <div class="topicon_menubar" id="menubar">
-                <a href="history.html">
+                <a href="history.html" title="ประวัติศาสตร์ท้องถิ่น">
                     <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759322935306/IMG_6298.PNG"
                         class="home_icon">
+                    <h3 class="text_menu">ประวัติศาสตร์ท้องถิ่น</h3>
                 </a>
-                <a href="place.html">
+                <a href="place.html" title="วัดกัลยาณมิตรวรมหาวิหาร">
                     <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759641714738/Untitled_Artwork3.png"
                         class="home_icon">
+                    <h3 class="text_menu">วัดกัลยาณมิตร<br>วรมหาวิหาร</h3>
                 </a>
-                <a href="place2.html">
+                <a href="place2.html" title="โบสถ์ซางตาครูส">
                     <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759998234776/Untitled_Artwork4.png"
                         class="home_icon">
+                    <h3 class="text_menu">โบสถ์<br>ซางตาครูส</h3>
                 </a>
-                <a href="place3.html">
+                <a href="place3.html" title="วัดประยุรวงศาวาส">
                     <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036281404868264026/Untitled_Artwork5.png"
                         class="home_icon">
+                    <h3 class="text_menu">วัดประยุรวง<br>ศาวาส</h3>
                 </a>
-                <a href="place4.html">
+                <a href="place4.html" title="กุฎีขาว">
                     <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280760786759680/Untitled_Artwork2.png"
                         class="home_icon">
+                    <h3 class="text_menu">กุฎีขาว</h3>
                 </a>
-                <a href="place5.html">
+                <a href="place5.html" title="ศาลเจ้ากียนอันเกง">
                     <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280761151668254/Untitled_Artwork.png"
                         class="home_icon">
+                    <h3 class="text_menu">ศาลเจ้า<br>เกียนอันเกง</h3>
                 </a>
             </div>
             <a href="javascript:void(0);" onclick="hamburgerbar()">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036238169693245480/IMG_1083.PNG"
-                    class="homemain_icon topicon_mainmenu">
+                <img onclick="rot(this)" src="https://cdn.discordapp.com/attachments/1036192681614909460/1036238169693245480/IMG_1083.PNG"
+                    class="homemain_icon topicon_mainmenu" style="transition: 500ms;">
             </a>
         </div>
 
@@ -64,7 +70,7 @@
             </div>
             <div class="pic_wrap" style="height: 100%;">
                 <div class="left">
-                    <img src="https://cdn.discordapp.com/attachments/1036719251333075044/1036721976858923108/5f3b648dd50b5849.png" id="pai">
+                    <img src="https://cdn.discordapp.com/attachments/1036719251333075044/1044189825860915230/2d9292721a10fc24.png" id="pai">
                 </div>
             </div>
         </div>
@@ -200,30 +206,48 @@
             <!--footer menubar-->
             <div class="navbar_wrap">
                 <div class="navbar">
-                    <a href="history.html" class="iconplace">
-                        <img
-                            src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759322935306/IMG_6298.PNG">
-                    </a>
-                    <a href="place.html" class="iconplace">
-                        <img
-                            src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759641714738/Untitled_Artwork3.png">
-                    </a>
-                    <a href="place2.html" class="iconplace">
-                        <img
-                            src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759998234776/Untitled_Artwork4.png">
-                    </a>
-                    <a href="place3.html" class="iconplace">
-                        <img
-                            src="https://cdn.discordapp.com/attachments/1036192681614909460/1036281404868264026/Untitled_Artwork5.png">
-                    </a>
-                    <a href="place4.html" class="iconplace">
-                        <img
-                            src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280760786759680/Untitled_Artwork2.png">
-                    </a>
-                    <a href="place5.html" class="iconplace">
-                        <img
-                            src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280761151668254/Untitled_Artwork.png">
-                    </a>
+                    <div class="iconfooter">
+                        <a href="history.html" class="iconplace">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759322935306/IMG_6298.PNG">
+                        </a>
+                        <h3 class="text_footer">ประวัติศาสตร์ท้องถิ่น</h3>
+                    </div>
+                    <div class="iconfooter">
+                        <a href="place.html" class="iconplace">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759641714738/Untitled_Artwork3.png">
+                        </a>
+                        <h3 class="text_footer">วัดกัลยาณมิตรวรมหาวิหาร</h3>
+                    </div>
+                    <div class="iconfooter">
+                        <a href="place2.html" class="iconplace">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280759998234776/Untitled_Artwork4.png">
+                        </a>
+                        <h3 class="text_footer">โบสถ์ซางตาครูส</h3>
+                    </div>
+                    <div class="iconfooter">
+                        <a href="place3.html" class="iconplace">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1036192681614909460/1036281404868264026/Untitled_Artwork5.png">
+                        </a>
+                        <h3 class="text_footer">วัดประยุรวงศาวาส</h3>
+                    </div>
+                    <div class="iconfooter">
+                        <a href="place4.html" class="iconplace">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280760786759680/Untitled_Artwork2.png">
+                        </a>
+                        <h3 class="text_footer">กุฎีขาว</h3>
+                    </div>
+                    <div class="iconfooter">
+                        <a href="place5.html" class="iconplace">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1036192681614909460/1036280761151668254/Untitled_Artwork.png">
+                        </a>
+                        <h3 class="text_footer">ศาลเจ้าเกียนอันเกง</h3>
+                    </div>
                 </div>
             </div>
 
@@ -246,6 +270,22 @@
                 x.style.display = "none";
             } else {
                 x.style.display = "block";
+            }
+        }
+    </script>
+
+    <!--rotate hamberger-->
+    <script>
+        var count = 0;
+        function rot(e) {
+            count++;
+            if (count%2 == 1) {
+                var deg = 135;
+                e.style.transform = "rotate(" + deg + "deg)";
+            }
+            else {
+                var deg = 0;
+                e.style.transform = "rotate(" + deg + "deg)";
             }
         }
     </script>

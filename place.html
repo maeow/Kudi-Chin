@@ -52,8 +52,8 @@
                 </a>
             </div>
             <a href="javascript:void(0);" onclick="hamburgerbar()">
-                <img src="https://cdn.discordapp.com/attachments/1036192681614909460/1036238169693245480/IMG_1083.PNG"
-                    class="homemain_icon topicon_mainmenu">
+                <img onclick="rot(this)" src="https://cdn.discordapp.com/attachments/1036192681614909460/1036238169693245480/IMG_1083.PNG"
+                    class="homemain_icon topicon_mainmenu" style="transition: 500ms;">
             </a>
         </div>
 
@@ -320,6 +320,22 @@
                 x.style.display = "none";
             } else {
                 x.style.display = "block";
+            }
+        }
+    </script>
+
+    <!--rotate hamberger-->
+    <script>
+        var count = 0;
+        function rot(e) {
+            count++;
+            if (count%2 == 1) {
+                var deg = 135;
+                e.style.transform = "rotate(" + deg + "deg)";
+            }
+            else {
+                var deg = 0;
+                e.style.transform = "rotate(" + deg + "deg)";
             }
         }
     </script>

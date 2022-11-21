@@ -6,6 +6,7 @@ var current_scroll = 0;
 var width = window.innerWidth;
 var height = window.innerHeight;
 var screen_height = window.innerHeight;
+var fire = document.querySelectorAll('.fire');
 
 function zeroShow(portrait){
     model[0].style.top = 'calc(50% - 8vw)';
@@ -14,6 +15,9 @@ function zeroHide(portrait){
     model[0].style.top = 'calc(0% - 8vmax)';
 }
 function firstShow(portrait){
+    for(var i = 0; i<5 ; i++){
+        fire[i].style.opacity = '1';
+    }
     if(portrait){
         model[1].style.top = '2vh';
         model[2].style.bottom = '55vh';
@@ -32,6 +36,9 @@ function firstShow(portrait){
     }
 }
 function firstHide(scrollv, portrait){
+    for(var i = 0; i<5 ; i++){
+        fire[i].style.opacity = '0';
+    }
     if(portrait){
         model[1].style.top = '-30vh';
         model[2].style.bottom = '55vh';

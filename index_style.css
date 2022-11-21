@@ -5,42 +5,22 @@ body{
     height: 100%;
 }
 
-.bg{
+#container{
     background-image: url(https://cdn.discordapp.com/attachments/1036292452883107891/1036703409241342062/1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
     height: 100vh;
-}
-
-.container{
     width: 100%;
-    box-sizing: border-box;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
 }
-
-/*.header{
-    width: 100%;
-    align-items: center;
-}*/
 
 .logo{
     margin-left: 7%;
     margin-top: 2%;
     position: absolute;
 }
-
-/*.img_place1{
-    transition: 0.3s;
-}
-
-.img_place1:hover{
-    transform: translateY(-0.5rem);
-}*/
-
 
 .place1{
     left: 52%;
@@ -50,9 +30,17 @@ body{
     text-align: center;
 }
 
-.place2{
+.history{
     left: 25%;
     top: 35%;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+}
+
+.place2{
+    left: 73%;
+    top: 15%;
     cursor: pointer;
     position: absolute;
     text-align: center;
@@ -111,8 +99,10 @@ body{
 
 .people{
     position: absolute;
-    top:42%;
-    left: 46%;
+    width: 12%;
+    top: 42%;
+    left: 15%;
+    animation: forward 3s linear;
 }
 
 .img_people{
@@ -125,8 +115,8 @@ body{
         width: 100%;
     }
     .people{
-        top: 45%;
-        left: 45%;
+        top: 50%;
+        left: 5%;
     }
 }
 
@@ -145,7 +135,7 @@ body{
         top: 9%;
     }
 
-    .place2{
+    .history{
         left: 10%;
         top: 38%;
     }
@@ -184,18 +174,22 @@ body{
     .img_people{
         width: 60%;
     }
+    .people{
+        width: 40%;
+        top: 36%;
+        left: 1%;
+    }
     .title{
         font-size: 15px;
     }
-
     .place1{
         left: 55%;
         top: 9%;
     }
 
-    .place2{
-        left: 0.5%;
-        top: 30%;
+    .history{
+        left: -1%;
+        top: 24%;
         width: 40%;
     }
 
@@ -220,10 +214,5 @@ body{
         left: 10%;
         top: 78%;
     }
-
-    .people{
-        top: 40%;
-        
-    }
-
 }
+

@@ -9,24 +9,23 @@
 </head>
 <body>
 
-    <div class="bg">
-        <div class="container">
+        <div id="container">
                 <div class="logo">
                     <img src="https://cdn.discordapp.com/attachments/824699449343344690/1035204537193070715/kudi2.png" alt="" class="img_logo">      
                 </div>  
 
                 <div class="place1">
-                    <a href="place.html">
-                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292578397663364/1.png" alt="" class="img_place"><br>
+                    <a href="javascript:setTimeout(()=>{window.location = 'place.html' },4300);" onclick="toPlace2()">
+                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292578397663364/1.png" alt="" id="img_place" class="img_place"><br>
                 </a>
                     <p4 class="title">
                         วัดกัลยาณมิตรวรมหาวิหาร
-                    </p4>
+                    </p4>   
                 </div>  
 
-                <div class="place2">
-                    <a href="history.html">
-                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292580213805137/history.PNG" alt="" class="img_place"><br>
+                <div class="history">
+                    <a href="javascript:setTimeout(()=>{window.location = 'history.html' },3000);" onclick="toHistory()">
+                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292580213805137/history.PNG" alt="" id="img_place" class="img_place"><br>
                 </a> 
                     <p4 class="title">
                         ประวัติศาสตร์ท้องถิ่น
@@ -34,8 +33,8 @@
                 </div>
 
                 <div class="place3">
-                    <a href="place2.html">
-                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292579836305438/5.png" alt="" class="img_place"><br>
+                    <a href="javascript:setTimeout(()=>{window.location = 'place2.html' },5000);" onclick="toPlace3()">
+                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292579836305438/5.png" alt="" id="img_place" class="img_place"><br>
                 </a>
                     <p4 class="title">
                         โบสถ์ซางตาครูส
@@ -43,8 +42,8 @@
                 </div>
 
                 <div class="place4">
-                    <a href="place5.html">
-                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292578745786458/2.png" alt="" class="img_place"><br>
+                    <a href="javascript:setTimeout(()=>{window.location = 'place5.html' },4000);" onclick="toPlace4()">
+                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292578745786458/2.png" alt="" id="img_place" class="img_place"><br>
                 </a>
                     <p4 class="title">
                         ศาลเจ้าเกียนอันเกง
@@ -52,8 +51,8 @@
                 </div>
 
                 <div class="place5">
-                    <a href="place4.html">
-                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292579437850664/4.png" alt="" class="img_place"><br>
+                    <a href="javascript:setTimeout(()=>{window.location = 'place4.html' },3000);" onclick="toPlace1()">
+                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292579437850664/4.png" alt="" id="img_place" class="img_place"><br>
                 </a>
                     <p4 class="title">
                         กุฎีขาว
@@ -61,20 +60,76 @@
                 </div>
 
                 <div class="place6">
-                    <a href="place3.html">
-                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292579089731677/3.png" alt="" class="img_place"><br>
+                    <a href="javascript:setTimeout(()=>{window.location = 'place3.html' },4500);" onclick="toPlace5()">
+                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036292579089731677/3.png" alt="" id="img_place" class="img_place"><br>
                 </a>
                     <p4 class="title">
                         วัดประยุรวงศาวาส
                     </p4>
                 </div>    
                 
-                <div class="people">
-                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1036570685365047346/4.png" alt="" class="img_people">
+                <div class="people" id="animate">
+                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1043877783807467550/e19075402303cca6.gif" alt="" class="img_people">
                 </div>
         </div>
-        
-    </div>  
+
+    <script>
+
+        function toHistory() {
+            let x = document.getElementById("animate")
+            x.style.left = "25%"
+            setTimeout(() => {x.style.top = "30%";}, 1000);
+            setTimeout(() => {x.style.opacity = "0"}, 2000);
+            x.style.transition = "4s"
+        }
+
+        function toPlace1(){
+            let x = document.getElementById("animate")
+            x.style.left = "22%"
+            setTimeout(() => {x.style.top = "65%";}, 1000);
+            setTimeout(() => {x.style.opacity = "0"}, 2000);
+            x.style.transition = "4s"
+        }
+
+        function toPlace2(){
+            let x = document.getElementById("animate")
+            x.style.left = "50%"
+            x.style.transition = "5s"
+            setTimeout(() => {x.style.top = "10%";}, 1000);
+            setTimeout(() => {x.style.opacity = "0"}, 2800);
+        }
+
+        function toPlace3(){
+            let x = document.getElementById("animate")
+            x.style.left = "45%"
+            setTimeout(() => {x.style.left = "68%";}, 2000);
+            setTimeout(() => {x.style.top = "28%";}, 1000);
+            setTimeout(() => {x.style.opacity = "0"}, 4000);
+            x.style.transition = "4s"
+        }
+
+        function toPlace4(){
+            let x = document.getElementById("animate")
+            x.style.left = "52%"
+            setTimeout(() => {x.style.top = "50%";}, 1000);
+            setTimeout(() => {x.style.opacity = "0"}, 2600);
+            x.style.transition = "5s"
+        }
+
+        function toPlace5(){
+            let x = document.getElementById("animate")
+            x.style.left = "10%"
+            setTimeout(() => {x.style.top = "70%";}, 700);
+            setTimeout(() => {x.style.left = "10%";}, 100);
+            setTimeout(() => {x.style.left = "66%";}, 100); 
+            setTimeout(() => {x.style.opacity = "0"}, 3000);
+            x.style.transition = "5s"
+        }
+
+    </script>    
+
+    
+
 
 </body>
 </html>

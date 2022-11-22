@@ -586,11 +586,3 @@ span:nth-child(10){
       transform: translateY(15px);
     }
   }
-#uncle{
-    width: 25vw;
-    height: auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}

@@ -486,6 +486,9 @@ function codeAddress(){
     else{
         eighthHide(scrollv, portrait);
     }
+    document.querySelector('#load_page').style.display = 'none';
+    document.querySelector('body').style.overflow = "scroll";
+    document.querySelector('body').style.overflowX = "hidden";
 }
 
 $(window).scroll(function () {

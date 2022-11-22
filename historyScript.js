@@ -1,4 +1,4 @@
-// window.onload = codeAddress;
+window.onload = codeAddress;
 var model = document.querySelectorAll('.model');
 var text = document.querySelectorAll('.text');
 var portrait = false;
@@ -422,7 +422,7 @@ function eighthHide(scrollv, portrait){
 }
 // alert(model[1].getAttribute('data-img'))
 
-// function codeAddress(){
+function codeAddress(){
     var scrollv = $(this).scrollTop();
     // check แนวจอ
     if(window.innerHeight > window.innerWidth){
@@ -486,7 +486,7 @@ function eighthHide(scrollv, portrait){
     else{
         eighthHide(scrollv, portrait);
     }
-// }
+}
 
 $(window).scroll(function () {
     // check แนวจอ

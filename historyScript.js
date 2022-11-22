@@ -49,7 +49,7 @@ function firstHide(scrollv, portrait){
             text[0].style.top = '-15vh';
         }
         else{
-            text[0].style.top = '100vh';
+            text[0].style.top = '120vh';
         }
     }
     else{
@@ -62,7 +62,7 @@ function firstHide(scrollv, portrait){
             text[0].style.top = '-15vh';
         }
         else{
-            text[0].style.top = '100vh';
+            text[0].style.top = '120vh';
         }
     }
 }
@@ -82,7 +82,7 @@ function secondHide(scrollv, portrait){
     model[5].style.right = '100vw';
     model[6].style.left = '100vw';
     if(scrollv>=height*16){
-        text[1].style.bottom = '100vh';
+        text[1].style.bottom = '120vh';
     }
     else{
         text[1].style.bottom = '-20vh';
@@ -129,7 +129,7 @@ function thirdHide(scrollv, portrait){
             model[10].style.right = '100vw';
             model[11].style.top = '32vh';
             model[11].style.right = '100vw';
-            text[2].style.bottom = '100vh'
+            text[2].style.bottom = '120vh'
         }
         else{
             model[7].style.right = '-71vw';
@@ -157,7 +157,7 @@ function thirdHide(scrollv, portrait){
             model[10].style.right = '100vw';
             model[11].style.top = '80vh';
             model[11].style.right = '100vw';
-            text[2].style.bottom = '100vh'
+            text[2].style.bottom = '120vh'
         }
         else{
             model[7].style.bottom = '20vh';
@@ -194,7 +194,7 @@ function forthHide(scrollv, portrait){
             text[3].style.top = '-20vh'
         }
         else{
-            text[3].style.top = '100vh'
+            text[3].style.top = '120vh'
         }
     }
     else{
@@ -204,7 +204,7 @@ function forthHide(scrollv, portrait){
             text[3].style.top = '-20vh'
         }
         else{
-            text[3].style.top = '100vh'
+            text[3].style.top = '120vh'
         }
     }
 }
@@ -226,7 +226,7 @@ function fifthHide(scrollv, portrait){
             model[14].style.right = '63vw';
             model[15].style.top = '45vh';
             model[15].style.left = '18vw';
-            text[4].style.bottom = '100vh'
+            text[4].style.bottom = '120vh'
             model[14].style.transform = 'scale(0.65)';
             model[15].style.transform = 'scale(0.65)';
             }
@@ -257,7 +257,7 @@ function fifthHide(scrollv, portrait){
             model[14].style.right = '63vw';
             model[15].style.top = '20vh';
             model[15].style.left = '15.5vw';
-            text[4].style.bottom = '100vh'
+            text[4].style.bottom = '120vh'
             }
         }
         else if(scrollv<height*30){
@@ -270,9 +270,9 @@ function fifthHide(scrollv, portrait){
         }
         else{
             // จบสุด
-            model[14].style.top = '100vh';
+            model[14].style.top = '120vh';
             model[14].style.right = '63vw';
-            model[15].style.top = '100vh';
+            model[15].style.top = '120vh';
             model[15].style.left = '15.5vw';
         }
     }
@@ -322,7 +322,7 @@ function sixthHide(scrollv, portrait){
             model[20].style.top = '30vh';
             model[20].style.left = 'calc(50% - 10.5vmax)';
             model[20].style.transform = 'scale(2)'
-            text[5].style.bottom = '100vh'
+            text[5].style.bottom = '120vh'
             model[20].style.opacity = '1';
         }
         else if(scrollv>=height*46){
@@ -348,24 +348,24 @@ function sixthHide(scrollv, portrait){
     }
     else{
         if(scrollv>=height*42 && scrollv<height*46){
-            model[16].style.top = '100vh';
+            model[16].style.top = '120vh';
             model[16].style.left = '27vw';
             model[17].style.bottom = '-40vh';
             model[17].style.right = '47vw';
-            model[18].style.top = '100vh';
+            model[18].style.top = '120vh';
             model[18].style.right = '33vw';
             model[19].style.bottom = '-40vh';
             model[19].style.right = '20vw';
             model[20].style.top = '30vh';
             model[20].style.left = '60vw';
             model[20].style.transform = 'scale(1.3)'
-            text[5].style.bottom = '100vh'
+            text[5].style.bottom = '120vh'
         }
         else if(scrollv>=height*46){
             model[20].style.left = '-20vw';
         }
         else{
-            model[16].style.top = '100vh';
+            model[16].style.top = '120vh';
             model[16].style.left = '-10vw';
             model[17].style.bottom = '-40vh';
             model[17].style.right = '20vw';
@@ -396,7 +396,7 @@ function seventhHide(scrollv, portrait){
     }
     else{
         if(scrollv>=height*46){
-            text[6].style.bottom = '100vh'
+            text[6].style.bottom = '120vh'
             text[6].style.right = '0vw'
         }
         else{
@@ -416,8 +416,8 @@ function eighthShow(portrait){
     }
 }
 function eighthHide(scrollv, portrait){
-    model[21].style.top = '100vh';
-    text[7].style.top = '100vh'
+    model[21].style.top = '120vh';
+    text[7].style.top = '120vh'
 }
 // alert(model[1].getAttribute('data-img'))
 

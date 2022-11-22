@@ -1,3 +1,4 @@
+// window.onload = codeAddress;
 var model = document.querySelectorAll('.model');
 var text = document.querySelectorAll('.text');
 var portrait = false;
@@ -419,7 +420,73 @@ function eighthHide(scrollv, portrait){
     model[21].style.top = '120vh';
     text[7].style.top = '120vh'
 }
+// alert(model[1].getAttribute('data-img'))
 
+// function codeAddress(){
+    var scrollv = $(this).scrollTop();
+    // check แนวจอ
+    if(window.innerHeight > window.innerWidth){
+        portrait = true;
+    }
+    else{
+        portrait = false;
+    }
+    //
+
+    if(scrollv < height*4){
+        zeroShow(portrait);
+    }else{
+        zeroHide(portrait);
+    }
+    if(scrollv >= height*6 && scrollv < height*10){
+        firstShow(portrait);
+     }
+     else{
+        firstHide(scrollv, portrait);
+     }
+    if(scrollv >= height*12 && scrollv < height*16){
+       secondShow(portrait);
+    }
+    else{
+       secondHide(scrollv, portrait);
+    }
+    if(scrollv >= height*18 && scrollv < height*22){
+        thirdShow(portrait);
+    }
+    else{
+        thirdHide(scrollv, portrait);
+    }
+    if(scrollv >= height*24 && scrollv < height*28){
+        forthShow(portrait);
+    }
+    else{
+        forthHide(scrollv,  portrait);
+    }
+    if(scrollv >= height*30 && scrollv < height*36){
+        fifthShow(portrait);
+    }
+    else{
+        fifthHide(scrollv, portrait);
+    }
+    if(scrollv >= height*36 && scrollv < height*42){
+        sixthShow(portrait);
+    }
+    else{
+        sixthHide(scrollv, portrait);
+    }
+    if(scrollv >= height*42 && scrollv < height*46){
+        seventhShow(portrait);
+    }
+    else{
+        seventhHide(scrollv, portrait);
+    }
+    if(scrollv >= height*48){
+        eighthShow(portrait);
+    }
+    else{
+        eighthHide(scrollv, portrait);
+    }
+// }
 
 $(window).scroll(function () {
     // check แนวจอ

@@ -92,10 +92,10 @@
                 setTimeout(() => {x.style.top = "-14%"}, 1000);
                 x.style.transition = "4s"
             }
-            else{
+            if(screen_height = 1080)
                 let y = document.getElementById("animate")
                 y.style.left = "25%"
-                setTimeout(() => {x.style.top = "30%";}, 1000);
+                setTimeout(() => {y.style.top = "30%";}, 1000);
                 y.style.transition = "4s"
         }}
 
@@ -107,8 +107,8 @@
                 setTimeout(() => {x.style.top = "25%";}, 1000);
                 x.style.transition = "4s"
             }
-            else{
-                let x = document.getElementById("animate")
+            if(screen_height = 1080)
+                let y = document.getElementById("animate")
                 y.style.left = "22%"
                 setTimeout(() => {y.style.top = "65%";}, 1000);
                 y.style.transition = "4s"
@@ -125,7 +125,7 @@
                 setTimeout(() => {x.style.top = "-14%"}, 1000);
                 x.style.transition = "4s"
                 x.style.left = "50%"}
-            else{
+            if(screen_height = 1080)
                 let y = document.getElementById("animate")
                 y.style.left = "50%"
                 y.style.transition = "5s"
@@ -144,7 +144,7 @@
                 setTimeout(() => {x.style.left = "50%";}, 1000);
                 
                 x.style.transition = "4s"}
-            else{
+            if(screen_height = 1080)
                 let y = document.getElementById("animate")
                 y.style.left = "45%"
                 setTimeout(() => {y.style.left = "70%";}, 2000);
@@ -161,7 +161,7 @@
                 x.style.top ='35%'
                 setTimeout(() => {x.style.left = "40%"}, 1000);
                 x.style.transition = "4s"}
-            else{    
+            if(screen_height = 1080)
                 let y = document.getElementById("animate")
                 y.style.left = "52%"
                 setTimeout(() => {y.style.top = "50%";}, 1000);
@@ -176,15 +176,14 @@
                 x.style.left = "10%"
                 setTimeout(() => {x.style.top = "50%";}, 1000);
                 x.style.transition = "4s"}
-            else{    
+            if(screen_height = 1080)
                 let y = document.getElementById("animate")
-            x.style.left = "10%"
-            setTimeout(() => {x.style.top = "70%";}, 700);
-            setTimeout(() => {x.style.left = "10%";}, 100);
-            setTimeout(() => {x.style.left = "66%";}, 100);
-            x.style.transition = "5s"
+                y.style.left = "10%"
+                setTimeout(() => {y.style.top = "70%";}, 700);
+                setTimeout(() => {y.style.left = "10%";}, 100);
+                setTimeout(() => {y.style.left = "66%";}, 100);
+                y.style.transition = "5s"
         }
-    }
 
         /*animate.onclick = function(){
 

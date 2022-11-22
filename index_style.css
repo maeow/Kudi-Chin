@@ -5,6 +5,15 @@ body{
     height: 100%;
 }
 
+/*.bg{
+    background-image: url(https://cdn.discordapp.com/attachments/1036292452883107891/1036703409241342062/1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    height: 100vh;
+}*/
+
 #container{
     background-image: url(https://cdn.discordapp.com/attachments/1036292452883107891/1036703409241342062/1.png);
     background-size: cover;
@@ -16,11 +25,26 @@ body{
     overflow: hidden;
 }
 
+/*.header{
+    width: 100%;
+    align-items: center;
+}*/
+
 .logo{
     margin-left: 7%;
     margin-top: 2%;
     position: absolute;
 }
+
+
+/*.img_place1{
+    transition: 0.3s;
+}
+
+.img_place1:hover{
+    transform: translateY(-0.5rem);
+}*/
+
 
 .place1{
     left: 52%;
@@ -100,7 +124,7 @@ body{
 .people{
     position: absolute;
     width: 12%;
-    top: 42%;
+    top: 43%;
     left: 15%;
     animation: forward 3s linear;
 }
@@ -115,6 +139,10 @@ body{
         width: 100%;
     }
     .people{
+        top: 50%;
+        left: 5%;
+    }
+    #uncle{
         top: 50%;
         left: 5%;
     }
@@ -175,21 +203,25 @@ body{
         width: 60%;
     }
     .people{
-        width: 40%;
-        top: 36%;
+        width: 50%;
         left: 1%;
+        margin-top: 65%;
+    }
+    #uncle{
+        width: 50%;
     }
     .title{
         font-size: 15px;
     }
+
     .place1{
         left: 55%;
         top: 9%;
     }
 
     .history{
-        left: -1%;
-        top: 24%;
+        left: -5%;
+        top: 25%;
         width: 40%;
     }
 
@@ -214,5 +246,11 @@ body{
         left: 10%;
         top: 78%;
     }
+
+    .people{
+        top: 40%;
+        
+    }
+
 }
 

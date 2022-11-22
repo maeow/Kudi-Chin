@@ -4,7 +4,6 @@ body{
     background-color: #F7F1E3;
     padding: 0;
     margin: 0;
-    /* overflow-x: hidden; */
     overflow: hidden;
 }
 .wrap{
@@ -53,10 +52,7 @@ body{
 }
 .fire{
     transition: 1s;
-    /* transition-delay: 1s; */
     position: fixed;
-    /* left: 0; */
-    /* top: 0; */
     z-index: -1;
 }
 img[data-img="fire1"]{
@@ -196,13 +192,11 @@ img.model{
 }
 
 #second > .content > .model:nth-child(2){
-    /* top: calc(50% - 10vmax); */
-    top: 40vh;
+    top: 28vh;
     transform: scaleX(-1);
 }
 #second > .content > .model:nth-child(3){
-    /* top: calc(50% - 10vmax); */
-    top: 40vh;
+    top: 28vh;
 }
 #first > .content > .model{
     position: fixed;
@@ -331,10 +325,8 @@ img.model{
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
-    /* align-items: baseline; */
     align-items: flex-end;
     align-content: flex-end;
-    /* flex-wrap: wrap; */
     flex-wrap: nowrap;
 }
 .navbar a{
@@ -376,8 +368,6 @@ img.model{
 @media screen  and (orientation: portrait){
     .text{
         font-size: 2.1vmax;
-        /* text-align: left; */
-        /* text-indent: 5vw; */
         text-align: left;
         width: 80%;
         left: calc(50% - 40%);
@@ -425,13 +415,9 @@ img.model{
     }
     #fifth > .content > .model:nth-child(1){
         width: 20vmax;
-        /* right: 0; */
-        /* top: 25%; */
     }
     #fifth > .content > .model:nth-child(2){
         width: 18vmax;
-        /* left: 0; */
-        /* top: 25%; */
     }
     .model[data-img="people1"]{
         width: 19vmax;
@@ -459,13 +445,6 @@ img.model{
     img[data-img="fire3"]{
         top: 9vh;
     }
-    /* img[data-img="fire5"]{
-        bottom: 9vh;
-        right: 6vw;
-        width: 11vmax;
-        z-index: -1;
-        opacity: 0;
-    } */
     img[data-img="fire4"]{
         top: 27.5vh;
         left: 19vw;
@@ -473,6 +452,12 @@ img.model{
     img[data-img="fire5"]{
         top: 49vh;
         right: 23vw;
+    }
+    #second > .content > .model:nth-child(2){
+        top: 40vh;
+    }
+    #second > .content > .model:nth-child(3){
+        top: 40vh;
     }
 }
 

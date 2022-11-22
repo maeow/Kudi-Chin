@@ -68,68 +68,136 @@
                     </p4>
                 </div>    
                 
-                <div class="people" id="animate">
+                <div class="people" id="animate" >
                     <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1043877783807467550/e19075402303cca6.gif" alt="" class="img_people">
                 </div>
+
+                <!--<div id="uncle">
+                    <img src="https://cdn.discordapp.com/attachments/1036292452883107891/1043877783807467550/e19075402303cca6.gif" alt="" class="img_people">
+                </div>-->
+
         </div>
+
+        <!--<script src="home.js"></script>-->
+
 
     <script>
 
         function toHistory() {
-            let x = document.getElementById("animate")
-            x.style.left = "25%"
-            setTimeout(() => {x.style.top = "30%";}, 1000);
-            setTimeout(() => {x.style.opacity = "0"}, 2000);
-            x.style.transition = "4s"
-        }
+            var screen_height = window.innerHeight;
+            if (screen_height = 390){
+                let x = document.getElementById("animate")
+                x.style.top ='35%'
+                x.style.left = "10%"
+                setTimeout(() => {x.style.top = "-14%"}, 1000);
+                x.style.transition = "4s"
+            }
+            else{
+                let y = document.getElementById("animate")
+                y.style.left = "25%"
+                setTimeout(() => {x.style.top = "30%";}, 1000);
+                y.style.transition = "4s"
+        }}
 
         function toPlace1(){
-            let x = document.getElementById("animate")
-            x.style.left = "22%"
-            setTimeout(() => {x.style.top = "65%";}, 1000);
-            setTimeout(() => {x.style.opacity = "0"}, 2000);
-            x.style.transition = "4s"
+            var screen_height = window.innerHeight;
+            if (screen_height = 390){
+                let x = document.getElementById("animate")
+                x.style.left = "5%"
+                setTimeout(() => {x.style.top = "25%";}, 1000);
+                x.style.transition = "4s"
+            }
+            else{
+                let x = document.getElementById("animate")
+                y.style.left = "22%"
+                setTimeout(() => {y.style.top = "65%";}, 1000);
+                y.style.transition = "4s"
         }
+    }
 
         function toPlace2(){
-            let x = document.getElementById("animate")
-            x.style.left = "50%"
-            x.style.transition = "5s"
-            setTimeout(() => {x.style.top = "10%";}, 1000);
-            setTimeout(() => {x.style.opacity = "0"}, 2800);
+            var screen_height = window.innerHeight;
+            if (screen_height = 390){
+                let x = document.getElementById("animate")
+                x.style.left = "5%"
+                x.style.top ='35%'
+                x.style.left = "50%"
+                setTimeout(() => {x.style.top = "-14%"}, 1000);
+                x.style.transition = "4s"
+                x.style.left = "50%"}
+            else{
+                let y = document.getElementById("animate")
+                y.style.left = "50%"
+                y.style.transition = "5s"
+                setTimeout(() => {y.style.top = "10%";}, 1000);
+            }
         }
 
         function toPlace3(){
-            let x = document.getElementById("animate")
-            x.style.left = "45%"
-            setTimeout(() => {x.style.left = "68%";}, 2000);
-            setTimeout(() => {x.style.top = "28%";}, 1000);
-            setTimeout(() => {x.style.opacity = "0"}, 4000);
-            x.style.transition = "4s"
+            var screen_height = window.innerHeight;
+            if (screen_height = 390){
+                let x = document.getElementById("animate")
+                setTimeout(() => {x.style.left = "50%";}, 1000);
+                setTimeout(() => {x.style.left = "20%";}, 1000);
+                setTimeout(() => {x.style.left = "50%";}, 1000);
+                setTimeout(() => {x.style.top = "10%";}, 1000);
+                setTimeout(() => {x.style.left = "50%";}, 1000);
+                
+                x.style.transition = "4s"}
+            else{
+                let y = document.getElementById("animate")
+                y.style.left = "45%"
+                setTimeout(() => {y.style.left = "70%";}, 2000);
+                setTimeout(() => {y.style.top = "28%";}, 1000);
+                y.style.transition = "4s"
+            }
         }
 
         function toPlace4(){
-            let x = document.getElementById("animate")
-            x.style.left = "52%"
-            setTimeout(() => {x.style.top = "50%";}, 1000);
-            setTimeout(() => {x.style.opacity = "0"}, 2600);
-            x.style.transition = "5s"
+            var screen_height = window.innerHeight;
+            if (screen_height = 390){
+                let x = document.getElementById("animate")
+                x.style.left = "50%"
+                x.style.top ='35%'
+                setTimeout(() => {x.style.left = "40%"}, 1000);
+                x.style.transition = "4s"}
+            else{    
+                let y = document.getElementById("animate")
+                y.style.left = "52%"
+                setTimeout(() => {y.style.top = "50%";}, 1000);
+                y.style.transition = "5s"
         }
+    }
 
         function toPlace5(){
-            let x = document.getElementById("animate")
+            var screen_height = window.innerHeight;
+            if (screen_height = 390){
+                let x = document.getElementById("animate")
+                x.style.left = "10%"
+                setTimeout(() => {x.style.top = "50%";}, 1000);
+                x.style.transition = "4s"}
+            else{    
+                let y = document.getElementById("animate")
             x.style.left = "10%"
             setTimeout(() => {x.style.top = "70%";}, 700);
             setTimeout(() => {x.style.left = "10%";}, 100);
-            setTimeout(() => {x.style.left = "66%";}, 100); 
-            setTimeout(() => {x.style.opacity = "0"}, 3000);
+            setTimeout(() => {x.style.left = "66%";}, 100);
             x.style.transition = "5s"
         }
+    }
 
-    </script>    
+        /*animate.onclick = function(){
 
-    
+            animate({
+                duration: 3000,
+                timing: beyblade(),
+            })
 
-
+            animate({
+                duration: 3000,
+                timing: top(),
+            })
+        }*/
+    </script>
 </body>
-</html>
+</html>    

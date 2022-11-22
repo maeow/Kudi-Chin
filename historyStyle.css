@@ -195,11 +195,13 @@ img.model{
 }
 
 #second > .content > .model:nth-child(2){
-    top: calc(50% - 10vmax);
+    /* top: calc(50% - 10vmax); */
+    top: 40vh;
     transform: scaleX(-1);
 }
 #second > .content > .model:nth-child(3){
-    top: calc(50% - 10vmax);
+    /* top: calc(50% - 10vmax); */
+    top: 40vh;
 }
 #first > .content > .model{
     position: fixed;

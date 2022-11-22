@@ -59,13 +59,13 @@ body{
     z-index: -1;
 }
 img[data-img="fire1"]{
-    top: 2vh;
+    top: 4vh;
     left: 50vw;
     width: 15vmax;
     opacity: 0;
 }
 img[data-img="fire2"]{
-    top: 2vh;
+    top: 4vh;
     right: 50vw;
     width: 15vmax;
     opacity: 0;
@@ -454,21 +454,21 @@ img.model{
         left: calc(50% - 15vmax);
     }
     img[data-img="fire3"]{
-        top: 7vh;
+        top: 9vh;
     }
-    img[data-img="fire5"]{
+    /* img[data-img="fire5"]{
         bottom: 9vh;
         right: 6vw;
         width: 11vmax;
         z-index: -1;
         opacity: 0;
-    }
+    } */
     img[data-img="fire4"]{
-        bottom: 60.5vh;
+        top: 27.5vh;
         left: 19vw;
     }
     img[data-img="fire5"]{
-        bottom: 40vh;
+        top: 49vh;
         right: 23vw;
     }
 }
